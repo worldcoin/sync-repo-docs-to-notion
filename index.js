@@ -39,18 +39,38 @@ const getNotionRootPageId = () => {
   return notionUrlMatch[0]
 }
 
+// const getFilesToProcess = () => {
+//   let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' })
+
+//   // pop readme to top
+//   const readmePath = `${process.env.FOLDER}/README.md`
+//   if (files.includes(readmePath)) {
+//     files = files.filter((path) => path !== readmePath)
+//     files = [readmePath, ...files]
+//   }
+
+//   return files
+// }
+
 const getFilesToProcess = () => {
-  let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' })
+  let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' });
 
   // pop readme to top
-  const readmePath = `${process.env.FOLDER}/README.md`
+  const readmePath = `${process.env.FOLDER}/README.md`;
   if (files.includes(readmePath)) {
-    files = files.filter((path) => path !== readmePath)
-    files = [readmePath, ...files]
+    files = files.filter((path) => path !== readmePath);
+    files.unshift(readmePath);
   }
 
-  return files
-}
+  // Create a map mapping title (first heading) to file path
+  const filesToHeadings = files.reduce((acc, filePath) => {
+    const title = titleFromFirstHeading(filePath);
+    acc.set(title, filePath);
+    return acc;
+  }, new Map());
+
+  return filesToHeadings;
+};
 
 const deleteBlocksSequentially = function (idToDelete, allIdsToDelete) {
   if (!idToDelete) return new Promise((resolve, _reject) => resolve())
@@ -107,6 +127,21 @@ const titleFromFilePath = (filePath) => {
   return title.replace('.md', '')
 }
 
+const titleFromFirstHeading = (filePath) => {
+  // Read the content of the file
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+
+  // Use a regular expression to find the first Markdown heading
+  const match = fileContent.match(/^#\s*(.+)/m);
+  if (match && match[1]) {
+    // Return the first heading without the '# ' prefix
+    return match[1].trim();
+  } else {
+    // If no heading is found, return a default title or handle it as needed
+    return 'Default Title';
+  }
+}
+
 const titleToFilePath = (filePath) => {
   return `${process.env.FOLDER}/${filePath}.md`
 }
@@ -146,7 +181,8 @@ const createPagesSequentially = (fileToCreate, allFilesToCreate, rootPage) => {
 
   const createOne = (file, files, resolve, reject) => {
     const newBlocks = fileToNotionBlocks(file)
-    const title = titleFromFilePath(file)
+    const title = titleFromFirstHeading(file)
+    // const title = titleFromFilePath(file)
 
     notion.pages.create({
       parent: {
@@ -206,7 +242,8 @@ const updatePagesSequentially = (fileToUpdate, filesToUpdate, blocksWithChildPag
     }
 
     const blockWithChildPage = blocksWithChildPages.filter((r) => {
-      return r.child_page?.title === titleFromFilePath(file)
+      // return r.child_page?.title === titleFromFilePath(file)
+      return r.child_page?.id === fileToUpdate.
     })[0]
     if (!blockWithChildPage) {
       console.log('block not found on readme, skip ... (this is error)', file)
@@ -283,22 +320,57 @@ const run = function () {
     // const toCreate = filesToCreate.map((e) => titleFromFilePath(e))
 
     notion.blocks.children.list({ block_id: getNotionRootPageId() }).then((blocksResponse) => {
-      const current = blocksResponse.results.map((e) => titleToFilePath(e.child_page.title))
+      const blocksTitlesToIds = blocksResponse.results.reduce((acc, block) => {
+        if (block.child_page && block.child_page.title && block.id) {
+          acc[block.child_page.title] = block.id;
+        }
+        return acc;
+      }, {});
+      // const blocksTitles = blocksResponse.results.map((e) => e.child_page.title)
       // console.log('created titles ->', current)
 
-      const toCreate = getFilesToProcess()
-      const updateList = toCreate.filter((e) => current.includes(e))
-      const createList = toCreate.filter((e) => !current.includes(e))
-      const deleteList = current.filter((e) => !toCreate.includes(e))
+      const filesTitlesToPaths = getFilesToProcess()
 
-      console.log('createList ->', createList)
-      console.log('updateList ->', updateList)
+      // title -> id
+      const updateMap = new Map();
+
+      filesTitlesToPaths.forEach((path, title) => {
+        if (blocksTitlesToIds.hasOwnProperty(title)) {
+          updateMap.set(title, blocksTitlesToIds[title]);
+        }
+      });
+
+      // title -> path
+      const createMap = new Map();
+
+      filesTitlesToPaths.forEach((path, title) => {
+        if (!blocksTitlesToIds.has(title)) {
+          createList.set(title, path);
+        }
+      });
+
+      const deleteList = [];
+
+      blocksTitlesToIds.forEach((id, title) => {
+        if (!filesTitlesToPaths.has(title)) {
+          deleteList.push(id);
+        }
+      });
+      // const updateList = filesTitlesToPaths.filter((title) => blocksTitlesToIds.includes(title))
+      // const createList = filesTitlesToPaths.filter((title) => !blocksTitlesToIds.includes(title))
+      // const deleteList = blocksTitlesToIds.filter((title) => !filesTitlesToPaths.includes(title))
+      // console.log('updateList ->', updateList)
+      // console.log('createList ->', createList)
+      // console.log('deleteList ->', deleteList)
+
+      console.log('updateList ->', updateMap)
+      console.log('createList ->', createMap)
       console.log('deleteList ->', deleteList)
 
-      updatePagesSequentially(updateList[0], updateList, blocksResponse.results).then(() => {
+      updatePagesSequentially(updateMap[0], updateMap, blocksResponse.results).then(() => {
         console.log('--- all pages updated')
 
-        createPagesSequentially(createList[0], createList, rootPage).then(() => {
+        createPagesSequentially(createMap[0], createMap, rootPage).then(() => {
           console.log('--- new pages created')
 
           deleteBlocksSequentially(deleteList[0], deleteList).then(() => {

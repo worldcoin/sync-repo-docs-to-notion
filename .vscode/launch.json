@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\index.js",
+            "env": {
+                "FOLDER": "${workspaceFolder}",
+                "NOTION_TOKEN": "***REMOVED***",
+                "NOTION_ROOT_PAGE_ID": "***REMOVED***",
+                "RELATIVE_URLS_ROOT": "null"
+            }
+        }
+    ]
+}
