@@ -6,6 +6,17 @@
 - no images support for now (instead please use mermaid.js embeddable diagrams)
 - appends md5:hash to each document (to check for changes)
 
+## Local installation
+- install [nvm for windows](https://github.com/coreybutler/nvm-windows)
+- nvm install 16.20.0
+- nvm use 16.20.0
+- npm install
+- set environment variables:
+$env:FOLDER=$pwd
+$env:NOTION_TOKEN='your_notion_token'
+$env:NOTION_ROOT_PAGE_ID='***REMOVED***'
+$env:RELATIVE_URLS_ROOT='null'
+
 ## Inputs
 
 All configuration are done with environmnent variables for compability with other ci's.
