@@ -25752,7 +25752,7 @@ const run = function () {
 
       console.log('updateList ->', updateMap);
       console.log('createList ->', createMap);
-      console.log('deleteList ->', deleteList);
+      // console.log('deleteList ->', deleteList);
 
       updatePagesSequentially(updateMap, filePathMap, blocksResponse.results).then(() => {
         console.log('--- all pages updated')
