@@ -39,21 +39,10 @@ const getNotionRootPageId = () => {
   return notionUrlMatch[0]
 }
 
-// const getFilesToProcess = () => {
-//   let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' })
-
-//   // pop readme to top
-//   const readmePath = `${process.env.FOLDER}/README.md`
-//   if (files.includes(readmePath)) {
-//     files = files.filter((path) => path !== readmePath)
-//     files = [readmePath, ...files]
-//   }
-
-//   return files
-// }
-
 const getFilesToProcess = () => {
-  let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' });
+  // let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' });
+  // Currently only interested in uploading README files
+  let files = globSync(`${process.env.FOLDER}/**/README.md`, { ignore: 'node_modules/**' });
 
   // pop readme to top
   const readmePath = `${process.env.FOLDER}/README.md`;
@@ -122,13 +111,6 @@ const deepReplaceValue = (target, lookupKey, newValueFn) => {
   return target
 }
 
-const titleFromFilePath = (filePath) => {
-  let title = filePath.split(process.env.FOLDER).splice(-1)[0]
-  title = title.replace(/^\//, '')
-
-  return title.replace('.md', '')
-}
-
 const titleFromFirstHeading = (filePath) => {
   // Read the content of the file
   const fileContent = fs.readFileSync(filePath, 'utf8');
@@ -142,10 +124,6 @@ const titleFromFirstHeading = (filePath) => {
     // If no heading is found, return a default title or handle it as needed
     return 'Default Title';
   }
-}
-
-const titleToFilePath = (filePath) => {
-  return `${process.env.FOLDER}/${filePath}.md`
 }
 
 const fileToNotionBlocks = (filePath) => {
@@ -374,12 +352,13 @@ const run = function () {
       updatePagesSequentially(updateMap, filePathMap, blocksResponse.results).then(() => {
         console.log('--- all pages updated')
 
-        createPagesSequentially(createMap[0], createMap, rootPage).then(() => {
+        createPagesSequentially(createMap, rootPage).then(() => {
           console.log('--- new pages created')
 
-          deleteBlocksSequentially(deleteList).then(() => {
-            console.log('--- sync complete')
-          })
+          // Disable deletion for now - not needed for our use case
+          // deleteBlocksSequentially(deleteList).then(() => {
+          //   console.log('--- sync complete')
+          // })
         })
       })
     })
