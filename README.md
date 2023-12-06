@@ -14,7 +14,7 @@
 - set environment variables:
 $env:FOLDER=$pwd
 $env:NOTION_TOKEN='your_notion_token'
-$env:NOTION_ROOT_PAGE_ID='***REMOVED***'
+$env:NOTION_ROOT_PAGE_ID='your_page_id'
 $env:RELATIVE_URLS_ROOT='null'
 
 ## Inputs
