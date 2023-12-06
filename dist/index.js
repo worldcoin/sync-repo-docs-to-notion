@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 547:
+/***/ 232:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -19,11 +19,11 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 };
 var _Client_auth, _Client_logLevel, _Client_logger, _Client_prefixUrl, _Client_timeoutMs, _Client_notionVersion, _Client_fetch, _Client_agent, _Client_userAgent;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const logging_1 = __nccwpck_require__(4918);
-const errors_1 = __nccwpck_require__(6682);
-const utils_1 = __nccwpck_require__(3729);
-const api_endpoints_1 = __nccwpck_require__(3116);
-const node_fetch_1 = __nccwpck_require__(6326);
+const logging_1 = __nccwpck_require__(4272);
+const errors_1 = __nccwpck_require__(5059);
+const utils_1 = __nccwpck_require__(2478);
+const api_endpoints_1 = __nccwpck_require__(1452);
+const node_fetch_1 = __nccwpck_require__(863);
 const package_json_1 = __nccwpck_require__(3797);
 class Client {
     constructor(options) {
@@ -411,7 +411,7 @@ Client.defaultNotionVersion = "2022-06-28";
 
 /***/ }),
 
-/***/ 3116:
+/***/ 1452:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -610,14 +610,14 @@ exports.listComments = {
 
 /***/ }),
 
-/***/ 6682:
+/***/ 5059:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.buildRequestError = exports.APIResponseError = exports.UnknownHTTPResponseError = exports.isHTTPResponseError = exports.RequestTimeoutError = exports.isNotionClientError = exports.ClientErrorCode = exports.APIErrorCode = void 0;
-const utils_1 = __nccwpck_require__(3729);
+const utils_1 = __nccwpck_require__(2478);
 /**
  * Error codes returned in responses from the API.
  */
@@ -820,7 +820,7 @@ function isAPIErrorCode(code) {
 
 /***/ }),
 
-/***/ 6286:
+/***/ 4294:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -923,18 +923,18 @@ exports.isFullComment = isFullComment;
 
 /***/ }),
 
-/***/ 4232:
+/***/ 2578:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.isFullComment = exports.isFullUser = exports.isFullPage = exports.isFullDatabase = exports.isFullBlock = exports.iteratePaginatedAPI = exports.collectPaginatedAPI = exports.isNotionClientError = exports.RequestTimeoutError = exports.UnknownHTTPResponseError = exports.APIResponseError = exports.ClientErrorCode = exports.APIErrorCode = exports.LogLevel = exports.Client = void 0;
-var Client_1 = __nccwpck_require__(547);
+var Client_1 = __nccwpck_require__(232);
 Object.defineProperty(exports, "Client", ({ enumerable: true, get: function () { return Client_1.default; } }));
-var logging_1 = __nccwpck_require__(4918);
+var logging_1 = __nccwpck_require__(4272);
 Object.defineProperty(exports, "LogLevel", ({ enumerable: true, get: function () { return logging_1.LogLevel; } }));
-var errors_1 = __nccwpck_require__(6682);
+var errors_1 = __nccwpck_require__(5059);
 Object.defineProperty(exports, "APIErrorCode", ({ enumerable: true, get: function () { return errors_1.APIErrorCode; } }));
 Object.defineProperty(exports, "ClientErrorCode", ({ enumerable: true, get: function () { return errors_1.ClientErrorCode; } }));
 Object.defineProperty(exports, "APIResponseError", ({ enumerable: true, get: function () { return errors_1.APIResponseError; } }));
@@ -942,7 +942,7 @@ Object.defineProperty(exports, "UnknownHTTPResponseError", ({ enumerable: true, 
 Object.defineProperty(exports, "RequestTimeoutError", ({ enumerable: true, get: function () { return errors_1.RequestTimeoutError; } }));
 // Error helpers
 Object.defineProperty(exports, "isNotionClientError", ({ enumerable: true, get: function () { return errors_1.isNotionClientError; } }));
-var helpers_1 = __nccwpck_require__(6286);
+var helpers_1 = __nccwpck_require__(4294);
 Object.defineProperty(exports, "collectPaginatedAPI", ({ enumerable: true, get: function () { return helpers_1.collectPaginatedAPI; } }));
 Object.defineProperty(exports, "iteratePaginatedAPI", ({ enumerable: true, get: function () { return helpers_1.iteratePaginatedAPI; } }));
 Object.defineProperty(exports, "isFullBlock", ({ enumerable: true, get: function () { return helpers_1.isFullBlock; } }));
@@ -954,14 +954,14 @@ Object.defineProperty(exports, "isFullComment", ({ enumerable: true, get: functi
 
 /***/ }),
 
-/***/ 4918:
+/***/ 4272:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.logLevelSeverity = exports.makeConsoleLogger = exports.LogLevel = void 0;
-const utils_1 = __nccwpck_require__(3729);
+const utils_1 = __nccwpck_require__(2478);
 var LogLevel;
 (function (LogLevel) {
     LogLevel["DEBUG"] = "debug";
@@ -997,7 +997,7 @@ exports.logLevelSeverity = logLevelSeverity;
 
 /***/ }),
 
-/***/ 3729:
+/***/ 2478:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -1028,7 +1028,7 @@ exports.isObject = isObject;
 
 /***/ }),
 
-/***/ 2062:
+/***/ 1092:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1038,11 +1038,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.markdownToRichText = exports.markdownToBlocks = void 0;
-const unified_1 = __importDefault(__nccwpck_require__(3389));
-const remark_parse_1 = __importDefault(__nccwpck_require__(9680));
-const internal_1 = __nccwpck_require__(9779);
-const remark_gfm_1 = __importDefault(__nccwpck_require__(2750));
-const remark_math_1 = __importDefault(__nccwpck_require__(2083));
+const unified_1 = __importDefault(__nccwpck_require__(41));
+const remark_parse_1 = __importDefault(__nccwpck_require__(6221));
+const internal_1 = __nccwpck_require__(2889);
+const remark_gfm_1 = __importDefault(__nccwpck_require__(2900));
+const remark_math_1 = __importDefault(__nccwpck_require__(9760));
 /**
  * Parses Markdown content into Notion Blocks.
  *
@@ -1070,14 +1070,14 @@ exports.markdownToRichText = markdownToRichText;
 
 /***/ }),
 
-/***/ 7679:
+/***/ 9851:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.equation = exports.tableRow = exports.table = exports.toDo = exports.numberedListItem = exports.bulletedListItem = exports.headingThree = exports.headingTwo = exports.headingOne = exports.table_of_contents = exports.image = exports.blockquote = exports.code = exports.paragraph = void 0;
-const common_1 = __nccwpck_require__(9155);
+const common_1 = __nccwpck_require__(2140);
 function paragraph(text) {
     return {
         object: 'block',
@@ -1232,7 +1232,7 @@ exports.equation = equation;
 
 /***/ }),
 
-/***/ 9155:
+/***/ 2140:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -1368,7 +1368,7 @@ exports.isSupportedCodeLang = isSupportedCodeLang;
 
 /***/ }),
 
-/***/ 2828:
+/***/ 7311:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1389,8 +1389,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseCodeLanguage = void 0;
 const languageMap_json_1 = __importDefault(__nccwpck_require__(392));
-__exportStar(__nccwpck_require__(7679), exports);
-__exportStar(__nccwpck_require__(9155), exports);
+__exportStar(__nccwpck_require__(9851), exports);
+__exportStar(__nccwpck_require__(2140), exports);
 function parseCodeLanguage(lang) {
     return lang
         ? languageMap_json_1.default[lang.toLowerCase()]
@@ -1401,7 +1401,7 @@ exports.parseCodeLanguage = parseCodeLanguage;
 
 /***/ }),
 
-/***/ 9779:
+/***/ 2889:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -1430,10 +1430,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.parseRichText = exports.parseBlocks = void 0;
-const notion = __importStar(__nccwpck_require__(2828));
+const notion = __importStar(__nccwpck_require__(7311));
 const path_1 = __importDefault(__nccwpck_require__(1017));
 const url_1 = __nccwpck_require__(7310);
-const notion_1 = __nccwpck_require__(2828);
+const notion_1 = __nccwpck_require__(7311);
 function ensureLength(text, copy) {
     const chunks = text.match(/[^]{1,2000}/g) || [];
     return chunks.flatMap((item) => notion.richText(item, copy));
@@ -1672,7 +1672,7 @@ exports.parseRichText = parseRichText;
 
 /***/ }),
 
-/***/ 2558:
+/***/ 8869:
 /***/ ((module) => {
 
 "use strict";
@@ -1689,7 +1689,7 @@ function bail(err) {
 
 /***/ }),
 
-/***/ 5996:
+/***/ 5693:
 /***/ ((module) => {
 
 "use strict";
@@ -1759,10 +1759,10 @@ function range(a, b, str) {
 
 /***/ }),
 
-/***/ 635:
+/***/ 5761:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var balanced = __nccwpck_require__(5996);
+var balanced = __nccwpck_require__(5693);
 
 module.exports = expandTop;
 
@@ -1969,7 +1969,7 @@ function expand(str, isTop) {
 
 /***/ }),
 
-/***/ 1536:
+/***/ 936:
 /***/ ((module) => {
 
 "use strict";
@@ -1999,7 +1999,7 @@ function ccount(source, character) {
 
 /***/ }),
 
-/***/ 7556:
+/***/ 7688:
 /***/ ((module) => {
 
 "use strict";
@@ -2020,7 +2020,7 @@ module.exports = string => {
 
 /***/ }),
 
-/***/ 6468:
+/***/ 7193:
 /***/ ((module) => {
 
 "use strict";
@@ -2145,7 +2145,7 @@ module.exports = function extend() {
 
 /***/ }),
 
-/***/ 3005:
+/***/ 9942:
 /***/ ((module) => {
 
 /*!
@@ -2163,7 +2163,7 @@ module.exports = function isBuffer (obj) {
 
 /***/ }),
 
-/***/ 5046:
+/***/ 5211:
 /***/ ((module) => {
 
 "use strict";
@@ -2181,7 +2181,7 @@ module.exports = value => {
 
 /***/ }),
 
-/***/ 2313:
+/***/ 8403:
 /***/ ((module) => {
 
 "use strict";
@@ -2225,13 +2225,13 @@ function longestStreak(value, character) {
 
 /***/ }),
 
-/***/ 8835:
+/***/ 4525:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var repeat = __nccwpck_require__(3889)
+var repeat = __nccwpck_require__(7805)
 
 module.exports = markdownTable
 
@@ -2482,7 +2482,7 @@ function toAlignment(value) {
 
 /***/ }),
 
-/***/ 3361:
+/***/ 7052:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2490,9 +2490,9 @@ function toAlignment(value) {
 
 module.exports = findAndReplace
 
-var visit = __nccwpck_require__(3814)
-var convert = __nccwpck_require__(1725)
-var escape = __nccwpck_require__(7556)
+var visit = __nccwpck_require__(3719)
+var convert = __nccwpck_require__(9570)
+var escape = __nccwpck_require__(7688)
 
 var splice = [].splice
 
@@ -2670,7 +2670,7 @@ function toFunction(replace) {
 
 /***/ }),
 
-/***/ 5699:
+/***/ 2879:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2680,16 +2680,16 @@ module.exports = fromMarkdown
 
 // These three are compiled away in the `dist/`
 
-var toString = __nccwpck_require__(7300)
-var assign = __nccwpck_require__(994)
-var own = __nccwpck_require__(1069)
-var normalizeIdentifier = __nccwpck_require__(5129)
-var safeFromInt = __nccwpck_require__(4869)
-var parser = __nccwpck_require__(890)
-var preprocessor = __nccwpck_require__(5550)
-var postprocess = __nccwpck_require__(3535)
-var decode = __nccwpck_require__(7860)
-var stringifyPosition = __nccwpck_require__(8051)
+var toString = __nccwpck_require__(5879)
+var assign = __nccwpck_require__(6798)
+var own = __nccwpck_require__(451)
+var normalizeIdentifier = __nccwpck_require__(479)
+var safeFromInt = __nccwpck_require__(7203)
+var parser = __nccwpck_require__(8106)
+var preprocessor = __nccwpck_require__(5883)
+var postprocess = __nccwpck_require__(4618)
+var decode = __nccwpck_require__(851)
+var stringifyPosition = __nccwpck_require__(8911)
 
 function fromMarkdown(value, encoding, options) {
   if (typeof encoding !== 'string') {
@@ -3501,24 +3501,24 @@ function extension(config, extension) {
 
 /***/ }),
 
-/***/ 7657:
+/***/ 934:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-module.exports = __nccwpck_require__(5699)
+module.exports = __nccwpck_require__(2879)
 
 
 /***/ }),
 
-/***/ 6657:
+/***/ 9754:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
-var ccount = __nccwpck_require__(1536)
-var findAndReplace = __nccwpck_require__(3361)
-var unicodePunctuation = __nccwpck_require__(6832)
-var unicodeWhitespace = __nccwpck_require__(4842)
+var ccount = __nccwpck_require__(936)
+var findAndReplace = __nccwpck_require__(7052)
+var unicodePunctuation = __nccwpck_require__(8839)
+var unicodeWhitespace = __nccwpck_require__(7104)
 
 exports.transforms = [transformGfmAutolinkLiterals]
 exports.enter = {
@@ -3676,7 +3676,7 @@ function previous(match, email) {
 
 /***/ }),
 
-/***/ 3255:
+/***/ 294:
 /***/ ((__unused_webpack_module, exports) => {
 
 var inConstruct = 'phrasing'
@@ -3709,7 +3709,7 @@ exports.unsafe = [
 
 /***/ }),
 
-/***/ 5666:
+/***/ 1149:
 /***/ ((__unused_webpack_module, exports) => {
 
 exports.canContainEols = ['delete']
@@ -3727,10 +3727,10 @@ function exitStrikethrough(token) {
 
 /***/ }),
 
-/***/ 3798:
+/***/ 8430:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
-var phrasing = __nccwpck_require__(5524)
+var phrasing = __nccwpck_require__(5168)
 
 exports.unsafe = [{character: '~', inConstruct: 'phrasing'}]
 exports.handlers = {delete: handleDelete}
@@ -3751,7 +3751,7 @@ function peekDelete() {
 
 /***/ }),
 
-/***/ 1735:
+/***/ 7506:
 /***/ ((__unused_webpack_module, exports) => {
 
 exports.enter = {
@@ -3811,12 +3811,12 @@ function replace($0, $1) {
 
 /***/ }),
 
-/***/ 1525:
+/***/ 5744:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var phrasing = __nccwpck_require__(5524)
-var defaultInlineCode = __nccwpck_require__(3045)
-var markdownTable = __nccwpck_require__(8835)
+var phrasing = __nccwpck_require__(5168)
+var defaultInlineCode = __nccwpck_require__(6078)
+var markdownTable = __nccwpck_require__(4525)
 
 module.exports = toMarkdown
 
@@ -3930,7 +3930,7 @@ function toMarkdown(options) {
 
 /***/ }),
 
-/***/ 1388:
+/***/ 9182:
 /***/ ((__unused_webpack_module, exports) => {
 
 exports.exit = {
@@ -3987,10 +3987,10 @@ function exitParagraphWithTaskListItem(token) {
 
 /***/ }),
 
-/***/ 5794:
+/***/ 284:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
-var defaultListItem = __nccwpck_require__(5393)
+var defaultListItem = __nccwpck_require__(9513)
 
 exports.unsafe = [{atBreak: true, character: '-', after: '[:|-]'}]
 
@@ -4016,13 +4016,13 @@ function listItemWithTaskListItem(node, parent, context) {
 
 /***/ }),
 
-/***/ 716:
+/***/ 8130:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var autolinkLiteral = __nccwpck_require__(6657)
-var strikethrough = __nccwpck_require__(5666)
-var table = __nccwpck_require__(1735)
-var taskListItem = __nccwpck_require__(1388)
+var autolinkLiteral = __nccwpck_require__(9754)
+var strikethrough = __nccwpck_require__(1149)
+var table = __nccwpck_require__(7506)
+var taskListItem = __nccwpck_require__(9182)
 
 var own = {}.hasOwnProperty
 
@@ -4065,14 +4065,14 @@ function extension(config, extension) {
 
 /***/ }),
 
-/***/ 9245:
+/***/ 7070:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var autolinkLiteral = __nccwpck_require__(3255)
-var strikethrough = __nccwpck_require__(3798)
-var table = __nccwpck_require__(1525)
-var taskListItem = __nccwpck_require__(5794)
-var configure = __nccwpck_require__(923)
+var autolinkLiteral = __nccwpck_require__(294)
+var strikethrough = __nccwpck_require__(8430)
+var table = __nccwpck_require__(5744)
+var taskListItem = __nccwpck_require__(284)
+var configure = __nccwpck_require__(6173)
 
 module.exports = toMarkdown
 
@@ -4094,7 +4094,7 @@ function toMarkdown(options) {
 
 /***/ }),
 
-/***/ 3307:
+/***/ 3341:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -4185,7 +4185,7 @@ function exitMathData(token) {
 
 /***/ }),
 
-/***/ 710:
+/***/ 8805:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4202,9 +4202,9 @@ exports.handlers = {math: math, inlineMath: inlineMath}
 
 inlineMath.peek = inlineMathPeek
 
-var repeat = __nccwpck_require__(3889)
-var streak = __nccwpck_require__(2313)
-var safe = __nccwpck_require__(2141)
+var repeat = __nccwpck_require__(7805)
+var streak = __nccwpck_require__(8403)
+var safe = __nccwpck_require__(8715)
 
 function math(node, _, context) {
   var raw = node.value || ''
@@ -4266,7 +4266,7 @@ function inlineMathPeek() {
 
 /***/ }),
 
-/***/ 923:
+/***/ 6173:
 /***/ ((module) => {
 
 module.exports = configure
@@ -4300,13 +4300,13 @@ function configure(base, extension) {
 
 /***/ }),
 
-/***/ 3045:
+/***/ 6078:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 module.exports = inlineCode
 inlineCode.peek = inlineCodePeek
 
-var patternCompile = __nccwpck_require__(4315)
+var patternCompile = __nccwpck_require__(8526)
 
 function inlineCode(node, parent, context) {
   var value = node.value || ''
@@ -4376,16 +4376,16 @@ function inlineCodePeek() {
 
 /***/ }),
 
-/***/ 5393:
+/***/ 9513:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 module.exports = listItem
 
-var repeat = __nccwpck_require__(3889)
-var checkBullet = __nccwpck_require__(6245)
-var checkListItemIndent = __nccwpck_require__(7215)
-var flow = __nccwpck_require__(3279)
-var indentLines = __nccwpck_require__(380)
+var repeat = __nccwpck_require__(7805)
+var checkBullet = __nccwpck_require__(476)
+var checkListItemIndent = __nccwpck_require__(5401)
+var flow = __nccwpck_require__(9998)
+var indentLines = __nccwpck_require__(7590)
 
 function listItem(node, parent, context) {
   var bullet = checkBullet(context)
@@ -4430,7 +4430,7 @@ function listItem(node, parent, context) {
 
 /***/ }),
 
-/***/ 6245:
+/***/ 476:
 /***/ ((module) => {
 
 module.exports = checkBullet
@@ -4452,7 +4452,7 @@ function checkBullet(context) {
 
 /***/ }),
 
-/***/ 7215:
+/***/ 5401:
 /***/ ((module) => {
 
 module.exports = checkListItemIndent
@@ -4478,12 +4478,12 @@ function checkListItemIndent(context) {
 
 /***/ }),
 
-/***/ 3279:
+/***/ 9998:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 module.exports = flow
 
-var repeat = __nccwpck_require__(3889)
+var repeat = __nccwpck_require__(7805)
 
 function flow(parent, context) {
   var children = parent.children || []
@@ -4532,7 +4532,7 @@ function flow(parent, context) {
 
 /***/ }),
 
-/***/ 5524:
+/***/ 5168:
 /***/ ((module) => {
 
 module.exports = phrasing
@@ -4596,7 +4596,7 @@ function phrasing(parent, context, safeOptions) {
 
 /***/ }),
 
-/***/ 380:
+/***/ 7590:
 /***/ ((module) => {
 
 module.exports = indentLines
@@ -4628,7 +4628,7 @@ function indentLines(value, map) {
 
 /***/ }),
 
-/***/ 4315:
+/***/ 8526:
 /***/ ((module) => {
 
 module.exports = patternCompile
@@ -4660,7 +4660,7 @@ function patternCompile(pattern) {
 
 /***/ }),
 
-/***/ 1751:
+/***/ 5365:
 /***/ ((module) => {
 
 module.exports = patternInScope
@@ -4697,13 +4697,13 @@ function listInScope(stack, list, none) {
 
 /***/ }),
 
-/***/ 2141:
+/***/ 8715:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 module.exports = safe
 
-var patternCompile = __nccwpck_require__(4315)
-var patternInScope = __nccwpck_require__(1751)
+var patternCompile = __nccwpck_require__(8526)
+var patternInScope = __nccwpck_require__(5365)
 
 function safe(context, input, config) {
   var value = (config.before || '') + (input || '') + (config.after || '')
@@ -4843,7 +4843,7 @@ function escapeBackslashes(value, after) {
 
 /***/ }),
 
-/***/ 7300:
+/***/ 5879:
 /***/ ((module) => {
 
 "use strict";
@@ -4880,23 +4880,23 @@ function all(values) {
 
 /***/ }),
 
-/***/ 7526:
+/***/ 6567:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-module.exports = __nccwpck_require__(7226)
+module.exports = __nccwpck_require__(6)
 
 
 /***/ }),
 
-/***/ 7226:
+/***/ 6:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
-var asciiAlpha = __nccwpck_require__(1795)
-var asciiAlphanumeric = __nccwpck_require__(7902)
-var asciiControl = __nccwpck_require__(5075)
-var markdownLineEnding = __nccwpck_require__(8320)
-var unicodePunctuation = __nccwpck_require__(6832)
-var unicodeWhitespace = __nccwpck_require__(4842)
+var asciiAlpha = __nccwpck_require__(9621)
+var asciiAlphanumeric = __nccwpck_require__(7508)
+var asciiControl = __nccwpck_require__(2855)
+var markdownLineEnding = __nccwpck_require__(1921)
+var unicodePunctuation = __nccwpck_require__(8839)
+var unicodeWhitespace = __nccwpck_require__(7104)
 
 var www = {tokenize: tokenizeWww, partial: true}
 var domain = {tokenize: tokenizeDomain, partial: true}
@@ -5476,15 +5476,15 @@ function previous(events) {
 
 /***/ }),
 
-/***/ 8918:
+/***/ 6126:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 module.exports = create
 
-var classifyCharacter = __nccwpck_require__(4781)
-var chunkedSplice = __nccwpck_require__(148)
-var resolveAll = __nccwpck_require__(4480)
-var shallow = __nccwpck_require__(7681)
+var classifyCharacter = __nccwpck_require__(696)
+var chunkedSplice = __nccwpck_require__(8985)
+var resolveAll = __nccwpck_require__(7879)
+var shallow = __nccwpck_require__(7783)
 
 function create(options) {
   var settings = options || {}
@@ -5643,22 +5643,22 @@ function create(options) {
 
 /***/ }),
 
-/***/ 8844:
+/***/ 1140:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-module.exports = __nccwpck_require__(4910)
+module.exports = __nccwpck_require__(8658)
 
 
 /***/ }),
 
-/***/ 4910:
+/***/ 8658:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 exports.flow = {
   null: {tokenize: tokenizeTable, resolve: resolveTable, interruptible: true}
 }
 
-var createSpace = __nccwpck_require__(452)
+var createSpace = __nccwpck_require__(1050)
 
 var setextUnderlineMini = {tokenize: tokenizeSetextUnderlineMini, partial: true}
 var nextPrefixedOrBlank = {tokenize: tokenizeNextPrefixedOrBlank, partial: true}
@@ -6234,20 +6234,20 @@ function tokenizeNextPrefixedOrBlank(effects, ok, nok) {
 
 /***/ }),
 
-/***/ 3822:
+/***/ 3378:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-module.exports = __nccwpck_require__(1232)
+module.exports = __nccwpck_require__(8043)
 
 
 /***/ }),
 
-/***/ 1232:
+/***/ 8043:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
-var markdownLineEndingOrSpace = __nccwpck_require__(6107)
-var spaceFactory = __nccwpck_require__(452)
-var prefixSize = __nccwpck_require__(4627)
+var markdownLineEndingOrSpace = __nccwpck_require__(5395)
+var spaceFactory = __nccwpck_require__(1050)
+var prefixSize = __nccwpck_require__(827)
 
 var tasklistCheck = {tokenize: tokenizeTasklistCheck}
 
@@ -6329,22 +6329,22 @@ function spaceThenNonSpace(effects, ok, nok) {
 
 /***/ }),
 
-/***/ 1164:
+/***/ 7892:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-module.exports = __nccwpck_require__(898)
+module.exports = __nccwpck_require__(6166)
 
 
 /***/ }),
 
-/***/ 898:
+/***/ 6166:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-var combine = __nccwpck_require__(5367)
-var autolink = __nccwpck_require__(7526)
-var strikethrough = __nccwpck_require__(8918)
-var table = __nccwpck_require__(8844)
-var tasklist = __nccwpck_require__(3822)
+var combine = __nccwpck_require__(6542)
+var autolink = __nccwpck_require__(6567)
+var strikethrough = __nccwpck_require__(6126)
+var table = __nccwpck_require__(1140)
+var tasklist = __nccwpck_require__(3378)
 
 module.exports = create
 
@@ -6355,27 +6355,27 @@ function create(options) {
 
 /***/ }),
 
-/***/ 8145:
+/***/ 7978:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-module.exports = __nccwpck_require__(4667)
+module.exports = __nccwpck_require__(1850)
 
 
 /***/ }),
 
-/***/ 4667:
+/***/ 1850:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-exports.flow = {36: __nccwpck_require__(1)}
-exports.text = {36: __nccwpck_require__(3562)}
+exports.flow = {36: __nccwpck_require__(8882)}
+exports.text = {36: __nccwpck_require__(7695)}
 
 
 /***/ }),
 
-/***/ 1:
+/***/ 8882:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6384,8 +6384,8 @@ exports.text = {36: __nccwpck_require__(3562)}
 exports.tokenize = tokenizeMathFenced
 exports.concrete = true
 
-var prefixSize = __nccwpck_require__(4627)
-var createSpace = __nccwpck_require__(452)
+var prefixSize = __nccwpck_require__(827)
+var createSpace = __nccwpck_require__(1050)
 
 function tokenizeMathFenced(effects, ok, nok) {
   var self = this
@@ -6518,7 +6518,7 @@ function tokenizeMathFenced(effects, ok, nok) {
 
 /***/ }),
 
-/***/ 3562:
+/***/ 7695:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -6703,13 +6703,13 @@ function tokenizeMathText(effects, ok, nok) {
 
 /***/ }),
 
-/***/ 1795:
+/***/ 9621:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var regexCheck = __nccwpck_require__(7764)
+var regexCheck = __nccwpck_require__(411)
 
 var asciiAlpha = regexCheck(/[A-Za-z]/)
 
@@ -6718,13 +6718,13 @@ module.exports = asciiAlpha
 
 /***/ }),
 
-/***/ 7902:
+/***/ 7508:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var regexCheck = __nccwpck_require__(7764)
+var regexCheck = __nccwpck_require__(411)
 
 var asciiAlphanumeric = regexCheck(/[\dA-Za-z]/)
 
@@ -6733,13 +6733,13 @@ module.exports = asciiAlphanumeric
 
 /***/ }),
 
-/***/ 6833:
+/***/ 518:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var regexCheck = __nccwpck_require__(7764)
+var regexCheck = __nccwpck_require__(411)
 
 var asciiAtext = regexCheck(/[#-'*+\--9=?A-Z^-~]/)
 
@@ -6748,7 +6748,7 @@ module.exports = asciiAtext
 
 /***/ }),
 
-/***/ 5075:
+/***/ 2855:
 /***/ ((module) => {
 
 "use strict";
@@ -6768,13 +6768,13 @@ module.exports = asciiControl
 
 /***/ }),
 
-/***/ 1794:
+/***/ 6196:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var regexCheck = __nccwpck_require__(7764)
+var regexCheck = __nccwpck_require__(411)
 
 var asciiDigit = regexCheck(/\d/)
 
@@ -6783,13 +6783,13 @@ module.exports = asciiDigit
 
 /***/ }),
 
-/***/ 1624:
+/***/ 1528:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var regexCheck = __nccwpck_require__(7764)
+var regexCheck = __nccwpck_require__(411)
 
 var asciiHexDigit = regexCheck(/[\dA-Fa-f]/)
 
@@ -6798,13 +6798,13 @@ module.exports = asciiHexDigit
 
 /***/ }),
 
-/***/ 6373:
+/***/ 453:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var regexCheck = __nccwpck_require__(7764)
+var regexCheck = __nccwpck_require__(411)
 
 var asciiPunctuation = regexCheck(/[!-/:-@[-`{-~]/)
 
@@ -6813,7 +6813,7 @@ module.exports = asciiPunctuation
 
 /***/ }),
 
-/***/ 6107:
+/***/ 5395:
 /***/ ((module) => {
 
 "use strict";
@@ -6828,7 +6828,7 @@ module.exports = markdownLineEndingOrSpace
 
 /***/ }),
 
-/***/ 8320:
+/***/ 1921:
 /***/ ((module) => {
 
 "use strict";
@@ -6843,7 +6843,7 @@ module.exports = markdownLineEnding
 
 /***/ }),
 
-/***/ 5304:
+/***/ 4152:
 /***/ ((module) => {
 
 "use strict";
@@ -6858,14 +6858,14 @@ module.exports = markdownSpace
 
 /***/ }),
 
-/***/ 6832:
+/***/ 8839:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var unicodePunctuationRegex = __nccwpck_require__(5571)
-var regexCheck = __nccwpck_require__(7764)
+var unicodePunctuationRegex = __nccwpck_require__(9571)
+var regexCheck = __nccwpck_require__(411)
 
 // In fact adds to the bundle size.
 
@@ -6876,13 +6876,13 @@ module.exports = unicodePunctuation
 
 /***/ }),
 
-/***/ 4842:
+/***/ 7104:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var regexCheck = __nccwpck_require__(7764)
+var regexCheck = __nccwpck_require__(411)
 
 var unicodeWhitespace = regexCheck(/\s/)
 
@@ -6891,7 +6891,7 @@ module.exports = unicodeWhitespace
 
 /***/ }),
 
-/***/ 994:
+/***/ 6798:
 /***/ ((module) => {
 
 "use strict";
@@ -6904,7 +6904,7 @@ module.exports = assign
 
 /***/ }),
 
-/***/ 9724:
+/***/ 6428:
 /***/ ((module) => {
 
 "use strict";
@@ -6917,7 +6917,7 @@ module.exports = fromCharCode
 
 /***/ }),
 
-/***/ 1069:
+/***/ 451:
 /***/ ((module) => {
 
 "use strict";
@@ -6930,7 +6930,7 @@ module.exports = own
 
 /***/ }),
 
-/***/ 7588:
+/***/ 3136:
 /***/ ((module) => {
 
 "use strict";
@@ -7007,7 +7007,7 @@ module.exports = basics
 
 /***/ }),
 
-/***/ 3674:
+/***/ 1884:
 /***/ ((module) => {
 
 "use strict";
@@ -7021,7 +7021,7 @@ module.exports = raws
 
 /***/ }),
 
-/***/ 6237:
+/***/ 3687:
 /***/ ((module) => {
 
 "use strict";
@@ -7034,7 +7034,7 @@ module.exports = splice
 
 /***/ }),
 
-/***/ 5571:
+/***/ 9571:
 /***/ ((module) => {
 
 "use strict";
@@ -7053,7 +7053,7 @@ module.exports = unicodePunctuation
 
 /***/ }),
 
-/***/ 6905:
+/***/ 2523:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7061,27 +7061,27 @@ module.exports = unicodePunctuation
 
 Object.defineProperty(exports, "__esModule", ({value: true}))
 
-var text$1 = __nccwpck_require__(6633)
-var attention = __nccwpck_require__(6935)
-var autolink = __nccwpck_require__(4455)
-var blockQuote = __nccwpck_require__(1551)
-var characterEscape = __nccwpck_require__(5063)
-var characterReference = __nccwpck_require__(3086)
-var codeFenced = __nccwpck_require__(5588)
-var codeIndented = __nccwpck_require__(2561)
-var codeText = __nccwpck_require__(9952)
-var definition = __nccwpck_require__(3819)
-var hardBreakEscape = __nccwpck_require__(8917)
-var headingAtx = __nccwpck_require__(6830)
-var htmlFlow = __nccwpck_require__(904)
-var htmlText = __nccwpck_require__(9919)
-var labelEnd = __nccwpck_require__(3349)
-var labelStartImage = __nccwpck_require__(1913)
-var labelStartLink = __nccwpck_require__(9180)
-var lineEnding = __nccwpck_require__(1489)
-var list = __nccwpck_require__(7590)
-var setextUnderline = __nccwpck_require__(7205)
-var thematicBreak = __nccwpck_require__(2175)
+var text$1 = __nccwpck_require__(8378)
+var attention = __nccwpck_require__(2866)
+var autolink = __nccwpck_require__(8175)
+var blockQuote = __nccwpck_require__(274)
+var characterEscape = __nccwpck_require__(9514)
+var characterReference = __nccwpck_require__(2738)
+var codeFenced = __nccwpck_require__(6065)
+var codeIndented = __nccwpck_require__(2645)
+var codeText = __nccwpck_require__(5729)
+var definition = __nccwpck_require__(2281)
+var hardBreakEscape = __nccwpck_require__(4845)
+var headingAtx = __nccwpck_require__(9160)
+var htmlFlow = __nccwpck_require__(2663)
+var htmlText = __nccwpck_require__(4862)
+var labelEnd = __nccwpck_require__(3885)
+var labelStartImage = __nccwpck_require__(6826)
+var labelStartLink = __nccwpck_require__(6829)
+var lineEnding = __nccwpck_require__(4371)
+var list = __nccwpck_require__(1798)
+var setextUnderline = __nccwpck_require__(2630)
+var thematicBreak = __nccwpck_require__(3527)
 
 var document = {
   42: list,
@@ -7188,7 +7188,7 @@ exports.text = text
 
 /***/ }),
 
-/***/ 9010:
+/***/ 8740:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7196,8 +7196,8 @@ exports.text = text
 
 Object.defineProperty(exports, "__esModule", ({value: true}))
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var factorySpace = __nccwpck_require__(1050)
 
 var tokenize = initializeContent
 
@@ -7265,7 +7265,7 @@ exports.tokenize = tokenize
 
 /***/ }),
 
-/***/ 7672:
+/***/ 3772:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7273,9 +7273,9 @@ exports.tokenize = tokenize
 
 Object.defineProperty(exports, "__esModule", ({value: true}))
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var factorySpace = __nccwpck_require__(452)
-var partialBlankLine = __nccwpck_require__(3991)
+var markdownLineEnding = __nccwpck_require__(1921)
+var factorySpace = __nccwpck_require__(1050)
+var partialBlankLine = __nccwpck_require__(6759)
 
 var tokenize = initializeDocument
 var containerConstruct = {
@@ -7510,7 +7510,7 @@ exports.tokenize = tokenize
 
 /***/ }),
 
-/***/ 5031:
+/***/ 9315:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7518,9 +7518,9 @@ exports.tokenize = tokenize
 
 Object.defineProperty(exports, "__esModule", ({value: true}))
 
-var content = __nccwpck_require__(2680)
-var factorySpace = __nccwpck_require__(452)
-var partialBlankLine = __nccwpck_require__(3991)
+var content = __nccwpck_require__(3978)
+var factorySpace = __nccwpck_require__(1050)
+var partialBlankLine = __nccwpck_require__(6759)
 
 var tokenize = initializeFlow
 
@@ -7578,7 +7578,7 @@ exports.tokenize = tokenize
 
 /***/ }),
 
-/***/ 6633:
+/***/ 8378:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7586,8 +7586,8 @@ exports.tokenize = tokenize
 
 Object.defineProperty(exports, "__esModule", ({value: true}))
 
-var assign = __nccwpck_require__(994)
-var shallow = __nccwpck_require__(7681)
+var assign = __nccwpck_require__(6798)
+var shallow = __nccwpck_require__(7783)
 
 var text = initializeFactory('text')
 var string = initializeFactory('string')
@@ -7787,20 +7787,20 @@ exports.text = text
 
 /***/ }),
 
-/***/ 890:
+/***/ 8106:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var content = __nccwpck_require__(9010)
-var document = __nccwpck_require__(7672)
-var flow = __nccwpck_require__(5031)
-var text = __nccwpck_require__(6633)
-var combineExtensions = __nccwpck_require__(5367)
-var createTokenizer = __nccwpck_require__(5965)
-var miniflat = __nccwpck_require__(1493)
-var constructs = __nccwpck_require__(6905)
+var content = __nccwpck_require__(8740)
+var document = __nccwpck_require__(3772)
+var flow = __nccwpck_require__(9315)
+var text = __nccwpck_require__(8378)
+var combineExtensions = __nccwpck_require__(6542)
+var createTokenizer = __nccwpck_require__(9573)
+var miniflat = __nccwpck_require__(7486)
+var constructs = __nccwpck_require__(2523)
 
 function parse(options) {
   var settings = options || {}
@@ -7831,13 +7831,13 @@ module.exports = parse
 
 /***/ }),
 
-/***/ 3535:
+/***/ 4618:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var subtokenize = __nccwpck_require__(8075)
+var subtokenize = __nccwpck_require__(8004)
 
 function postprocess(events) {
   while (!subtokenize(events)) {
@@ -7852,7 +7852,7 @@ module.exports = postprocess
 
 /***/ }),
 
-/***/ 5550:
+/***/ 5883:
 /***/ ((module) => {
 
 "use strict";
@@ -7947,18 +7947,18 @@ module.exports = preprocess
 
 /***/ }),
 
-/***/ 6935:
+/***/ 2866:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var chunkedPush = __nccwpck_require__(8650)
-var chunkedSplice = __nccwpck_require__(148)
-var classifyCharacter = __nccwpck_require__(4781)
-var movePoint = __nccwpck_require__(39)
-var resolveAll = __nccwpck_require__(4480)
-var shallow = __nccwpck_require__(7681)
+var chunkedPush = __nccwpck_require__(1767)
+var chunkedSplice = __nccwpck_require__(8985)
+var classifyCharacter = __nccwpck_require__(696)
+var movePoint = __nccwpck_require__(1079)
+var resolveAll = __nccwpck_require__(7879)
+var shallow = __nccwpck_require__(7783)
 
 var attention = {
   name: 'attention',
@@ -8141,16 +8141,16 @@ module.exports = attention
 
 /***/ }),
 
-/***/ 4455:
+/***/ 8175:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var asciiAlpha = __nccwpck_require__(1795)
-var asciiAlphanumeric = __nccwpck_require__(7902)
-var asciiAtext = __nccwpck_require__(6833)
-var asciiControl = __nccwpck_require__(5075)
+var asciiAlpha = __nccwpck_require__(9621)
+var asciiAlphanumeric = __nccwpck_require__(7508)
+var asciiAtext = __nccwpck_require__(518)
+var asciiControl = __nccwpck_require__(2855)
 
 var autolink = {
   name: 'autolink',
@@ -8274,14 +8274,14 @@ module.exports = autolink
 
 /***/ }),
 
-/***/ 1551:
+/***/ 274:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownSpace = __nccwpck_require__(5304)
-var factorySpace = __nccwpck_require__(452)
+var markdownSpace = __nccwpck_require__(4152)
+var factorySpace = __nccwpck_require__(1050)
 
 var blockQuote = {
   name: 'blockQuote',
@@ -8349,13 +8349,13 @@ module.exports = blockQuote
 
 /***/ }),
 
-/***/ 5063:
+/***/ 9514:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var asciiPunctuation = __nccwpck_require__(6373)
+var asciiPunctuation = __nccwpck_require__(453)
 
 var characterEscape = {
   name: 'characterEscape',
@@ -8391,16 +8391,16 @@ module.exports = characterEscape
 
 /***/ }),
 
-/***/ 3086:
+/***/ 2738:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var decodeEntity = __nccwpck_require__(7860)
-var asciiAlphanumeric = __nccwpck_require__(7902)
-var asciiDigit = __nccwpck_require__(1794)
-var asciiHexDigit = __nccwpck_require__(1624)
+var decodeEntity = __nccwpck_require__(851)
+var asciiAlphanumeric = __nccwpck_require__(7508)
+var asciiDigit = __nccwpck_require__(6196)
+var asciiHexDigit = __nccwpck_require__(1528)
 
 function _interopDefaultLegacy(e) {
   return e && typeof e === 'object' && 'default' in e ? e : {default: e}
@@ -8493,16 +8493,16 @@ module.exports = characterReference
 
 /***/ }),
 
-/***/ 5588:
+/***/ 6065:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var markdownLineEndingOrSpace = __nccwpck_require__(6107)
-var prefixSize = __nccwpck_require__(4627)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var markdownLineEndingOrSpace = __nccwpck_require__(5395)
+var prefixSize = __nccwpck_require__(827)
+var factorySpace = __nccwpck_require__(1050)
 
 var codeFenced = {
   name: 'codeFenced',
@@ -8677,16 +8677,16 @@ module.exports = codeFenced
 
 /***/ }),
 
-/***/ 2561:
+/***/ 2645:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var chunkedSplice = __nccwpck_require__(148)
-var prefixSize = __nccwpck_require__(4627)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var chunkedSplice = __nccwpck_require__(8985)
+var prefixSize = __nccwpck_require__(827)
+var factorySpace = __nccwpck_require__(1050)
 
 var codeIndented = {
   name: 'codeIndented',
@@ -8757,13 +8757,13 @@ module.exports = codeIndented
 
 /***/ }),
 
-/***/ 9952:
+/***/ 5729:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
+var markdownLineEnding = __nccwpck_require__(1921)
 
 var codeText = {
   name: 'codeText',
@@ -8927,16 +8927,16 @@ module.exports = codeText
 
 /***/ }),
 
-/***/ 2680:
+/***/ 3978:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var prefixSize = __nccwpck_require__(4627)
-var subtokenize = __nccwpck_require__(8075)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var prefixSize = __nccwpck_require__(827)
+var subtokenize = __nccwpck_require__(8004)
+var factorySpace = __nccwpck_require__(1050)
 
 // No name because it must not be turned off.
 var content = {
@@ -9034,20 +9034,20 @@ module.exports = content
 
 /***/ }),
 
-/***/ 3819:
+/***/ 2281:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var markdownLineEndingOrSpace = __nccwpck_require__(6107)
-var normalizeIdentifier = __nccwpck_require__(5129)
-var factoryDestination = __nccwpck_require__(7316)
-var factoryLabel = __nccwpck_require__(2115)
-var factorySpace = __nccwpck_require__(452)
-var factoryWhitespace = __nccwpck_require__(3498)
-var factoryTitle = __nccwpck_require__(5745)
+var markdownLineEnding = __nccwpck_require__(1921)
+var markdownLineEndingOrSpace = __nccwpck_require__(5395)
+var normalizeIdentifier = __nccwpck_require__(479)
+var factoryDestination = __nccwpck_require__(9856)
+var factoryLabel = __nccwpck_require__(1342)
+var factorySpace = __nccwpck_require__(1050)
+var factoryWhitespace = __nccwpck_require__(5003)
+var factoryTitle = __nccwpck_require__(419)
 
 var definition = {
   name: 'definition',
@@ -9157,15 +9157,15 @@ module.exports = definition
 
 /***/ }),
 
-/***/ 7316:
+/***/ 9856:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var asciiControl = __nccwpck_require__(5075)
-var markdownLineEndingOrSpace = __nccwpck_require__(6107)
-var markdownLineEnding = __nccwpck_require__(8320)
+var asciiControl = __nccwpck_require__(2855)
+var markdownLineEndingOrSpace = __nccwpck_require__(5395)
+var markdownLineEnding = __nccwpck_require__(1921)
 
 // eslint-disable-next-line max-params
 function destinationFactory(
@@ -9296,14 +9296,14 @@ module.exports = destinationFactory
 
 /***/ }),
 
-/***/ 2115:
+/***/ 1342:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var markdownSpace = __nccwpck_require__(5304)
+var markdownLineEnding = __nccwpck_require__(1921)
+var markdownSpace = __nccwpck_require__(4152)
 
 // eslint-disable-next-line max-params
 function labelFactory(effects, ok, nok, type, markerType, stringType) {
@@ -9392,13 +9392,13 @@ module.exports = labelFactory
 
 /***/ }),
 
-/***/ 452:
+/***/ 1050:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownSpace = __nccwpck_require__(5304)
+var markdownSpace = __nccwpck_require__(4152)
 
 function spaceFactory(effects, ok, type, max) {
   var limit = max ? max - 1 : Infinity
@@ -9430,14 +9430,14 @@ module.exports = spaceFactory
 
 /***/ }),
 
-/***/ 5745:
+/***/ 419:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var factorySpace = __nccwpck_require__(1050)
 
 function titleFactory(effects, ok, nok, type, markerType, stringType) {
   var marker
@@ -9513,15 +9513,15 @@ module.exports = titleFactory
 
 /***/ }),
 
-/***/ 3498:
+/***/ 5003:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var markdownSpace = __nccwpck_require__(5304)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var markdownSpace = __nccwpck_require__(4152)
+var factorySpace = __nccwpck_require__(1050)
 
 function whitespaceFactory(effects, ok) {
   var seen
@@ -9553,13 +9553,13 @@ module.exports = whitespaceFactory
 
 /***/ }),
 
-/***/ 8917:
+/***/ 4845:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
+var markdownLineEnding = __nccwpck_require__(1921)
 
 var hardBreakEscape = {
   name: 'hardBreakEscape',
@@ -9592,17 +9592,17 @@ module.exports = hardBreakEscape
 
 /***/ }),
 
-/***/ 6830:
+/***/ 9160:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var markdownLineEndingOrSpace = __nccwpck_require__(6107)
-var markdownSpace = __nccwpck_require__(5304)
-var chunkedSplice = __nccwpck_require__(148)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var markdownLineEndingOrSpace = __nccwpck_require__(5395)
+var markdownSpace = __nccwpck_require__(4152)
+var chunkedSplice = __nccwpck_require__(8985)
+var factorySpace = __nccwpck_require__(1050)
 
 var headingAtx = {
   name: 'headingAtx',
@@ -9729,21 +9729,21 @@ module.exports = headingAtx
 
 /***/ }),
 
-/***/ 904:
+/***/ 2663:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var asciiAlpha = __nccwpck_require__(1795)
-var asciiAlphanumeric = __nccwpck_require__(7902)
-var markdownLineEnding = __nccwpck_require__(8320)
-var markdownLineEndingOrSpace = __nccwpck_require__(6107)
-var markdownSpace = __nccwpck_require__(5304)
-var fromCharCode = __nccwpck_require__(9724)
-var htmlBlockNames = __nccwpck_require__(7588)
-var htmlRawNames = __nccwpck_require__(3674)
-var partialBlankLine = __nccwpck_require__(3991)
+var asciiAlpha = __nccwpck_require__(9621)
+var asciiAlphanumeric = __nccwpck_require__(7508)
+var markdownLineEnding = __nccwpck_require__(1921)
+var markdownLineEndingOrSpace = __nccwpck_require__(5395)
+var markdownSpace = __nccwpck_require__(4152)
+var fromCharCode = __nccwpck_require__(6428)
+var htmlBlockNames = __nccwpck_require__(3136)
+var htmlRawNames = __nccwpck_require__(1884)
+var partialBlankLine = __nccwpck_require__(6759)
 
 var htmlFlow = {
   name: 'htmlFlow',
@@ -10223,18 +10223,18 @@ module.exports = htmlFlow
 
 /***/ }),
 
-/***/ 9919:
+/***/ 4862:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var asciiAlpha = __nccwpck_require__(1795)
-var asciiAlphanumeric = __nccwpck_require__(7902)
-var markdownLineEnding = __nccwpck_require__(8320)
-var markdownLineEndingOrSpace = __nccwpck_require__(6107)
-var markdownSpace = __nccwpck_require__(5304)
-var factorySpace = __nccwpck_require__(452)
+var asciiAlpha = __nccwpck_require__(9621)
+var asciiAlphanumeric = __nccwpck_require__(7508)
+var markdownLineEnding = __nccwpck_require__(1921)
+var markdownLineEndingOrSpace = __nccwpck_require__(5395)
+var markdownSpace = __nccwpck_require__(4152)
+var factorySpace = __nccwpck_require__(1050)
 
 var htmlText = {
   name: 'htmlText',
@@ -10666,22 +10666,22 @@ module.exports = htmlText
 
 /***/ }),
 
-/***/ 3349:
+/***/ 3885:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEndingOrSpace = __nccwpck_require__(6107)
-var chunkedPush = __nccwpck_require__(8650)
-var chunkedSplice = __nccwpck_require__(148)
-var normalizeIdentifier = __nccwpck_require__(5129)
-var resolveAll = __nccwpck_require__(4480)
-var shallow = __nccwpck_require__(7681)
-var factoryDestination = __nccwpck_require__(7316)
-var factoryLabel = __nccwpck_require__(2115)
-var factoryTitle = __nccwpck_require__(5745)
-var factoryWhitespace = __nccwpck_require__(3498)
+var markdownLineEndingOrSpace = __nccwpck_require__(5395)
+var chunkedPush = __nccwpck_require__(1767)
+var chunkedSplice = __nccwpck_require__(8985)
+var normalizeIdentifier = __nccwpck_require__(479)
+var resolveAll = __nccwpck_require__(7879)
+var shallow = __nccwpck_require__(7783)
+var factoryDestination = __nccwpck_require__(9856)
+var factoryLabel = __nccwpck_require__(1342)
+var factoryTitle = __nccwpck_require__(419)
+var factoryWhitespace = __nccwpck_require__(5003)
 
 var labelEnd = {
   name: 'labelEnd',
@@ -11004,13 +11004,13 @@ module.exports = labelEnd
 
 /***/ }),
 
-/***/ 1913:
+/***/ 6826:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var labelEnd = __nccwpck_require__(3349)
+var labelEnd = __nccwpck_require__(3885)
 
 var labelStartImage = {
   name: 'labelStartImage',
@@ -11058,13 +11058,13 @@ module.exports = labelStartImage
 
 /***/ }),
 
-/***/ 9180:
+/***/ 6829:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var labelEnd = __nccwpck_require__(3349)
+var labelEnd = __nccwpck_require__(3885)
 
 var labelStartLink = {
   name: 'labelStartLink',
@@ -11101,13 +11101,13 @@ module.exports = labelStartLink
 
 /***/ }),
 
-/***/ 1489:
+/***/ 4371:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var factorySpace = __nccwpck_require__(452)
+var factorySpace = __nccwpck_require__(1050)
 
 var lineEnding = {
   name: 'lineEnding',
@@ -11130,19 +11130,19 @@ module.exports = lineEnding
 
 /***/ }),
 
-/***/ 7590:
+/***/ 1798:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var asciiDigit = __nccwpck_require__(1794)
-var markdownSpace = __nccwpck_require__(5304)
-var prefixSize = __nccwpck_require__(4627)
-var sizeChunks = __nccwpck_require__(1447)
-var factorySpace = __nccwpck_require__(452)
-var partialBlankLine = __nccwpck_require__(3991)
-var thematicBreak = __nccwpck_require__(2175)
+var asciiDigit = __nccwpck_require__(6196)
+var markdownSpace = __nccwpck_require__(4152)
+var prefixSize = __nccwpck_require__(827)
+var sizeChunks = __nccwpck_require__(2184)
+var factorySpace = __nccwpck_require__(1050)
+var partialBlankLine = __nccwpck_require__(6759)
+var thematicBreak = __nccwpck_require__(3527)
 
 var list = {
   name: 'list',
@@ -11352,14 +11352,14 @@ module.exports = list
 
 /***/ }),
 
-/***/ 3991:
+/***/ 6759:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var factorySpace = __nccwpck_require__(1050)
 
 var partialBlankLine = {
   tokenize: tokenizePartialBlankLine,
@@ -11379,15 +11379,15 @@ module.exports = partialBlankLine
 
 /***/ }),
 
-/***/ 7205:
+/***/ 2630:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var shallow = __nccwpck_require__(7681)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var shallow = __nccwpck_require__(7783)
+var factorySpace = __nccwpck_require__(1050)
 
 var setextUnderline = {
   name: 'setextUnderline',
@@ -11504,15 +11504,15 @@ module.exports = setextUnderline
 
 /***/ }),
 
-/***/ 2175:
+/***/ 3527:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEnding = __nccwpck_require__(8320)
-var markdownSpace = __nccwpck_require__(5304)
-var factorySpace = __nccwpck_require__(452)
+var markdownLineEnding = __nccwpck_require__(1921)
+var markdownSpace = __nccwpck_require__(4152)
+var factorySpace = __nccwpck_require__(1050)
 
 var thematicBreak = {
   name: 'thematicBreak',
@@ -11565,13 +11565,13 @@ module.exports = thematicBreak
 
 /***/ }),
 
-/***/ 8650:
+/***/ 1767:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var chunkedSplice = __nccwpck_require__(148)
+var chunkedSplice = __nccwpck_require__(8985)
 
 function chunkedPush(list, items) {
   if (list.length) {
@@ -11587,13 +11587,13 @@ module.exports = chunkedPush
 
 /***/ }),
 
-/***/ 148:
+/***/ 8985:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var splice = __nccwpck_require__(6237)
+var splice = __nccwpck_require__(3687)
 
 // causes a stack overflow in V8 when trying to insert 100k items for instance.
 
@@ -11633,15 +11633,15 @@ module.exports = chunkedSplice
 
 /***/ }),
 
-/***/ 4781:
+/***/ 696:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var markdownLineEndingOrSpace = __nccwpck_require__(6107)
-var unicodePunctuation = __nccwpck_require__(6832)
-var unicodeWhitespace = __nccwpck_require__(4842)
+var markdownLineEndingOrSpace = __nccwpck_require__(5395)
+var unicodePunctuation = __nccwpck_require__(8839)
+var unicodeWhitespace = __nccwpck_require__(7104)
 
 // Classify whether a character is unicode whitespace, unicode punctuation, or
 // anything else.
@@ -11666,15 +11666,15 @@ module.exports = classifyCharacter
 
 /***/ }),
 
-/***/ 5367:
+/***/ 6542:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var hasOwnProperty = __nccwpck_require__(1069)
-var chunkedSplice = __nccwpck_require__(148)
-var miniflat = __nccwpck_require__(1493)
+var hasOwnProperty = __nccwpck_require__(451)
+var chunkedSplice = __nccwpck_require__(8985)
+var miniflat = __nccwpck_require__(7486)
 
 function combineExtensions(extensions) {
   var all = {}
@@ -11723,21 +11723,21 @@ module.exports = combineExtensions
 
 /***/ }),
 
-/***/ 5965:
+/***/ 9573:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var assign = __nccwpck_require__(994)
-var markdownLineEnding = __nccwpck_require__(8320)
-var chunkedPush = __nccwpck_require__(8650)
-var chunkedSplice = __nccwpck_require__(148)
-var miniflat = __nccwpck_require__(1493)
-var resolveAll = __nccwpck_require__(4480)
-var serializeChunks = __nccwpck_require__(5600)
-var shallow = __nccwpck_require__(7681)
-var sliceChunks = __nccwpck_require__(6160)
+var assign = __nccwpck_require__(6798)
+var markdownLineEnding = __nccwpck_require__(1921)
+var chunkedPush = __nccwpck_require__(1767)
+var chunkedSplice = __nccwpck_require__(8985)
+var miniflat = __nccwpck_require__(7486)
+var resolveAll = __nccwpck_require__(7879)
+var serializeChunks = __nccwpck_require__(2585)
+var shallow = __nccwpck_require__(7783)
+var sliceChunks = __nccwpck_require__(8588)
 
 // Create a tokenizer.
 // Tokenizers deal with one type of data (e.g., containers, flow, text).
@@ -12047,7 +12047,7 @@ module.exports = createTokenizer
 
 /***/ }),
 
-/***/ 1493:
+/***/ 7486:
 /***/ ((module) => {
 
 "use strict";
@@ -12066,7 +12066,7 @@ module.exports = miniflat
 
 /***/ }),
 
-/***/ 39:
+/***/ 1079:
 /***/ ((module) => {
 
 "use strict";
@@ -12086,7 +12086,7 @@ module.exports = movePoint
 
 /***/ }),
 
-/***/ 5129:
+/***/ 479:
 /***/ ((module) => {
 
 "use strict";
@@ -12112,13 +12112,13 @@ module.exports = normalizeIdentifier
 
 /***/ }),
 
-/***/ 4627:
+/***/ 827:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var sizeChunks = __nccwpck_require__(1447)
+var sizeChunks = __nccwpck_require__(2184)
 
 function prefixSize(events, type) {
   var tail = events[events.length - 1]
@@ -12131,13 +12131,13 @@ module.exports = prefixSize
 
 /***/ }),
 
-/***/ 7764:
+/***/ 411:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var fromCharCode = __nccwpck_require__(9724)
+var fromCharCode = __nccwpck_require__(6428)
 
 function regexCheck(regex) {
   return check
@@ -12152,7 +12152,7 @@ module.exports = regexCheck
 
 /***/ }),
 
-/***/ 4480:
+/***/ 7879:
 /***/ ((module) => {
 
 "use strict";
@@ -12180,13 +12180,13 @@ module.exports = resolveAll
 
 /***/ }),
 
-/***/ 4869:
+/***/ 7203:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var fromCharCode = __nccwpck_require__(9724)
+var fromCharCode = __nccwpck_require__(6428)
 
 function safeFromInt(value, base) {
   var code = parseInt(value, base)
@@ -12214,13 +12214,13 @@ module.exports = safeFromInt
 
 /***/ }),
 
-/***/ 5600:
+/***/ 2585:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var fromCharCode = __nccwpck_require__(9724)
+var fromCharCode = __nccwpck_require__(6428)
 
 function serializeChunks(chunks) {
   var index = -1
@@ -12262,13 +12262,13 @@ module.exports = serializeChunks
 
 /***/ }),
 
-/***/ 7681:
+/***/ 7783:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var assign = __nccwpck_require__(994)
+var assign = __nccwpck_require__(6798)
 
 function shallow(object) {
   return assign({}, object)
@@ -12279,7 +12279,7 @@ module.exports = shallow
 
 /***/ }),
 
-/***/ 1447:
+/***/ 2184:
 /***/ ((module) => {
 
 "use strict";
@@ -12303,7 +12303,7 @@ module.exports = sizeChunks
 
 /***/ }),
 
-/***/ 6160:
+/***/ 8588:
 /***/ ((module) => {
 
 "use strict";
@@ -12338,15 +12338,15 @@ module.exports = sliceChunks
 
 /***/ }),
 
-/***/ 8075:
+/***/ 8004:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var assign = __nccwpck_require__(994)
-var chunkedSplice = __nccwpck_require__(148)
-var shallow = __nccwpck_require__(7681)
+var assign = __nccwpck_require__(6798)
+var chunkedSplice = __nccwpck_require__(8985)
+var shallow = __nccwpck_require__(7783)
 
 function subtokenize(events) {
   var jumps = {}
@@ -12545,7 +12545,7 @@ module.exports = subtokenize
 
 /***/ }),
 
-/***/ 9169:
+/***/ 1395:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13255,7 +13255,7 @@ exports.Minipass = Minipass
 
 /***/ }),
 
-/***/ 6326:
+/***/ 863:
 /***/ ((module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13268,7 +13268,7 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 var Stream = _interopDefault(__nccwpck_require__(2781));
 var http = _interopDefault(__nccwpck_require__(3685));
 var Url = _interopDefault(__nccwpck_require__(7310));
-var whatwgUrl = _interopDefault(__nccwpck_require__(750));
+var whatwgUrl = _interopDefault(__nccwpck_require__(7157));
 var https = _interopDefault(__nccwpck_require__(5687));
 var zlib = _interopDefault(__nccwpck_require__(9796));
 
@@ -13421,7 +13421,7 @@ FetchError.prototype.name = 'FetchError';
 
 let convert;
 try {
-	convert = (__nccwpck_require__(2209).convert);
+	convert = (__nccwpck_require__(3817).convert);
 } catch (e) {}
 
 const INTERNALS = Symbol('Body internals');
@@ -14960,7 +14960,7 @@ exports.FetchError = FetchError;
 
 /***/ }),
 
-/***/ 7860:
+/***/ 851:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14981,15 +14981,15 @@ function decodeEntity(characters) {
 
 /***/ }),
 
-/***/ 2750:
+/***/ 2900:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var syntax = __nccwpck_require__(1164)
-var fromMarkdown = __nccwpck_require__(716)
-var toMarkdown = __nccwpck_require__(9245)
+var syntax = __nccwpck_require__(7892)
+var fromMarkdown = __nccwpck_require__(8130)
+var toMarkdown = __nccwpck_require__(7070)
 
 var warningIssued
 
@@ -15028,15 +15028,15 @@ function gfm(options) {
 
 /***/ }),
 
-/***/ 2083:
+/***/ 9760:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var syntax = __nccwpck_require__(8145)
-var fromMarkdown = __nccwpck_require__(3307)
-var toMarkdown = __nccwpck_require__(710)
+var syntax = __nccwpck_require__(7978)
+var fromMarkdown = __nccwpck_require__(3341)
+var toMarkdown = __nccwpck_require__(8805)
 var warningIssued
 
 module.exports = math
@@ -15074,7 +15074,7 @@ function math() {
 
 /***/ }),
 
-/***/ 9680:
+/***/ 6221:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -15082,7 +15082,7 @@ function math() {
 
 module.exports = parse
 
-var fromMarkdown = __nccwpck_require__(7657)
+var fromMarkdown = __nccwpck_require__(934)
 
 function parse(options) {
   var self = this
@@ -15106,7 +15106,7 @@ function parse(options) {
 
 /***/ }),
 
-/***/ 3889:
+/***/ 7805:
 /***/ ((module) => {
 
 "use strict";
@@ -15184,7 +15184,7 @@ function repeat(str, num) {
 
 /***/ }),
 
-/***/ 8394:
+/***/ 3667:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -15385,13 +15385,13 @@ module.exports.PROCESSING_OPTIONS = PROCESSING_OPTIONS;
 
 /***/ }),
 
-/***/ 6590:
+/***/ 1193:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var wrap = __nccwpck_require__(6314)
+var wrap = __nccwpck_require__(7672)
 
 module.exports = trough
 
@@ -15467,7 +15467,7 @@ function trough() {
 
 /***/ }),
 
-/***/ 6314:
+/***/ 7672:
 /***/ ((module) => {
 
 "use strict";
@@ -15539,18 +15539,18 @@ function wrap(fn, callback) {
 
 /***/ }),
 
-/***/ 3389:
+/***/ 41:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var bail = __nccwpck_require__(2558)
-var buffer = __nccwpck_require__(3005)
-var extend = __nccwpck_require__(6468)
-var plain = __nccwpck_require__(5046)
-var trough = __nccwpck_require__(6590)
-var vfile = __nccwpck_require__(2600)
+var bail = __nccwpck_require__(8869)
+var buffer = __nccwpck_require__(9942)
+var extend = __nccwpck_require__(7193)
+var plain = __nccwpck_require__(5211)
+var trough = __nccwpck_require__(1193)
+var vfile = __nccwpck_require__(4131)
 
 // Expose a frozen processor.
 module.exports = unified().freeze()
@@ -16007,7 +16007,7 @@ function assertDone(name, asyncName, complete) {
 
 /***/ }),
 
-/***/ 1725:
+/***/ 9570:
 /***/ ((module) => {
 
 "use strict";
@@ -16092,7 +16092,7 @@ function ok() {
 
 /***/ }),
 
-/***/ 8051:
+/***/ 8911:
 /***/ ((module) => {
 
 "use strict";
@@ -16150,7 +16150,7 @@ function index(value) {
 
 /***/ }),
 
-/***/ 5338:
+/***/ 1472:
 /***/ ((module) => {
 
 module.exports = color
@@ -16161,7 +16161,7 @@ function color(d) {
 
 /***/ }),
 
-/***/ 3814:
+/***/ 3719:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -16169,8 +16169,8 @@ function color(d) {
 
 module.exports = visitParents
 
-var convert = __nccwpck_require__(1725)
-var color = __nccwpck_require__(5338)
+var convert = __nccwpck_require__(9570)
+var color = __nccwpck_require__(1472)
 
 var CONTINUE = true
 var SKIP = 'skip'
@@ -16262,13 +16262,13 @@ function toResult(value) {
 
 /***/ }),
 
-/***/ 159:
+/***/ 5830:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var stringify = __nccwpck_require__(8051)
+var stringify = __nccwpck_require__(8911)
 
 module.exports = VMessage
 
@@ -16364,26 +16364,26 @@ function parseOrigin(origin) {
 
 /***/ }),
 
-/***/ 2600:
+/***/ 4131:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-module.exports = __nccwpck_require__(1682)
+module.exports = __nccwpck_require__(9527)
 
 
 /***/ }),
 
-/***/ 5801:
+/***/ 9317:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var p = __nccwpck_require__(7809)
-var proc = __nccwpck_require__(675)
-var buffer = __nccwpck_require__(3005)
+var p = __nccwpck_require__(1213)
+var proc = __nccwpck_require__(2038)
+var buffer = __nccwpck_require__(9942)
 
 module.exports = VFile
 
@@ -16556,14 +16556,14 @@ function assertPath(path, name) {
 
 /***/ }),
 
-/***/ 1682:
+/***/ 9527:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-var VMessage = __nccwpck_require__(159)
-var VFile = __nccwpck_require__(5801)
+var VMessage = __nccwpck_require__(5830)
+var VFile = __nccwpck_require__(9317)
 
 module.exports = VFile
 
@@ -16610,7 +16610,7 @@ function info() {
 
 /***/ }),
 
-/***/ 7809:
+/***/ 1213:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -16621,7 +16621,7 @@ module.exports = __nccwpck_require__(1017)
 
 /***/ }),
 
-/***/ 675:
+/***/ 2038:
 /***/ ((module) => {
 
 "use strict";
@@ -16632,7 +16632,7 @@ module.exports = process
 
 /***/ }),
 
-/***/ 1767:
+/***/ 7359:
 /***/ ((module) => {
 
 "use strict";
@@ -16829,12 +16829,12 @@ conversions["RegExp"] = function (V, opts) {
 
 /***/ }),
 
-/***/ 8007:
+/***/ 5566:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
-const usm = __nccwpck_require__(3573);
+const usm = __nccwpck_require__(7125);
 
 exports.implementation = class URLImpl {
   constructor(constructorArgs) {
@@ -17037,15 +17037,15 @@ exports.implementation = class URLImpl {
 
 /***/ }),
 
-/***/ 6588:
+/***/ 7961:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-const conversions = __nccwpck_require__(1767);
-const utils = __nccwpck_require__(9939);
-const Impl = __nccwpck_require__(8007);
+const conversions = __nccwpck_require__(7359);
+const utils = __nccwpck_require__(8677);
+const Impl = __nccwpck_require__(5566);
 
 const impl = utils.implSymbol;
 
@@ -17241,32 +17241,32 @@ module.exports = {
 
 /***/ }),
 
-/***/ 750:
+/***/ 7157:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 
-exports.URL = __nccwpck_require__(6588)["interface"];
-exports.serializeURL = __nccwpck_require__(3573).serializeURL;
-exports.serializeURLOrigin = __nccwpck_require__(3573).serializeURLOrigin;
-exports.basicURLParse = __nccwpck_require__(3573).basicURLParse;
-exports.setTheUsername = __nccwpck_require__(3573).setTheUsername;
-exports.setThePassword = __nccwpck_require__(3573).setThePassword;
-exports.serializeHost = __nccwpck_require__(3573).serializeHost;
-exports.serializeInteger = __nccwpck_require__(3573).serializeInteger;
-exports.parseURL = __nccwpck_require__(3573).parseURL;
+exports.URL = __nccwpck_require__(7961)["interface"];
+exports.serializeURL = __nccwpck_require__(7125).serializeURL;
+exports.serializeURLOrigin = __nccwpck_require__(7125).serializeURLOrigin;
+exports.basicURLParse = __nccwpck_require__(7125).basicURLParse;
+exports.setTheUsername = __nccwpck_require__(7125).setTheUsername;
+exports.setThePassword = __nccwpck_require__(7125).setThePassword;
+exports.serializeHost = __nccwpck_require__(7125).serializeHost;
+exports.serializeInteger = __nccwpck_require__(7125).serializeInteger;
+exports.parseURL = __nccwpck_require__(7125).parseURL;
 
 
 /***/ }),
 
-/***/ 3573:
+/***/ 7125:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
 
 const punycode = __nccwpck_require__(5477);
-const tr46 = __nccwpck_require__(8394);
+const tr46 = __nccwpck_require__(3667);
 
 const specialSchemes = {
   ftp: 21,
@@ -18565,7 +18565,7 @@ module.exports.parseURL = function (input, options) {
 
 /***/ }),
 
-/***/ 9939:
+/***/ 8677:
 /***/ ((module) => {
 
 "use strict";
@@ -18593,7 +18593,7 @@ module.exports.implForWrapper = function (wrapper) {
 
 /***/ }),
 
-/***/ 2209:
+/***/ 3817:
 /***/ ((module) => {
 
 module.exports = eval("require")("encoding");
@@ -18705,18 +18705,18 @@ module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 9181:
+/***/ 425:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Glob = void 0;
-const minimatch_1 = __nccwpck_require__(1465);
-const path_scurry_1 = __nccwpck_require__(3357);
+const minimatch_1 = __nccwpck_require__(9181);
+const path_scurry_1 = __nccwpck_require__(2101);
 const url_1 = __nccwpck_require__(7310);
-const pattern_js_1 = __nccwpck_require__(6603);
-const walker_js_1 = __nccwpck_require__(7549);
+const pattern_js_1 = __nccwpck_require__(6998);
+const walker_js_1 = __nccwpck_require__(9522);
 // if no process global, just call it linux.
 // so we default to case-sensitive, / separators
 const defaultPlatform = typeof process === 'object' &&
@@ -18946,14 +18946,14 @@ exports.Glob = Glob;
 
 /***/ }),
 
-/***/ 7877:
+/***/ 9567:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.hasMagic = void 0;
-const minimatch_1 = __nccwpck_require__(1465);
+const minimatch_1 = __nccwpck_require__(9181);
 /**
  * Return true if the patterns provided contain any magic glob characters,
  * given the options provided.
@@ -18980,7 +18980,7 @@ exports.hasMagic = hasMagic;
 
 /***/ }),
 
-/***/ 7800:
+/***/ 5645:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -18991,8 +18991,8 @@ exports.hasMagic = hasMagic;
 // Ignores are always parsed in dot:true mode
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Ignore = void 0;
-const minimatch_1 = __nccwpck_require__(1465);
-const pattern_js_1 = __nccwpck_require__(6603);
+const minimatch_1 = __nccwpck_require__(9181);
+const pattern_js_1 = __nccwpck_require__(6998);
 const defaultPlatform = typeof process === 'object' &&
     process &&
     typeof process.platform === 'string'
@@ -19090,16 +19090,16 @@ exports.Ignore = Ignore;
 
 /***/ }),
 
-/***/ 5261:
+/***/ 7087:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.glob = exports.hasMagic = exports.Glob = exports.unescape = exports.escape = exports.sync = exports.iterate = exports.iterateSync = exports.stream = exports.streamSync = exports.globIterate = exports.globIterateSync = exports.globSync = exports.globStream = exports.globStreamSync = void 0;
-const minimatch_1 = __nccwpck_require__(1465);
-const glob_js_1 = __nccwpck_require__(9181);
-const has_magic_js_1 = __nccwpck_require__(7877);
+const minimatch_1 = __nccwpck_require__(9181);
+const glob_js_1 = __nccwpck_require__(425);
+const has_magic_js_1 = __nccwpck_require__(9567);
 function globStreamSync(pattern, options = {}) {
     return new glob_js_1.Glob(pattern, options).streamSync();
 }
@@ -19135,12 +19135,12 @@ exports.sync = Object.assign(globSync, {
     iterate: globIterateSync,
 });
 /* c8 ignore start */
-var minimatch_2 = __nccwpck_require__(1465);
+var minimatch_2 = __nccwpck_require__(9181);
 Object.defineProperty(exports, "escape", ({ enumerable: true, get: function () { return minimatch_2.escape; } }));
 Object.defineProperty(exports, "unescape", ({ enumerable: true, get: function () { return minimatch_2.unescape; } }));
-var glob_js_2 = __nccwpck_require__(9181);
+var glob_js_2 = __nccwpck_require__(425);
 Object.defineProperty(exports, "Glob", ({ enumerable: true, get: function () { return glob_js_2.Glob; } }));
-var has_magic_js_2 = __nccwpck_require__(7877);
+var has_magic_js_2 = __nccwpck_require__(9567);
 Object.defineProperty(exports, "hasMagic", ({ enumerable: true, get: function () { return has_magic_js_2.hasMagic; } }));
 /* c8 ignore stop */
 exports.glob = Object.assign(glob_, {
@@ -19165,7 +19165,7 @@ exports.glob.glob = exports.glob;
 
 /***/ }),
 
-/***/ 6603:
+/***/ 6998:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19173,7 +19173,7 @@ exports.glob.glob = exports.glob;
 // this is just a very light wrapper around 2 arrays with an offset index
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Pattern = void 0;
-const minimatch_1 = __nccwpck_require__(1465);
+const minimatch_1 = __nccwpck_require__(9181);
 const isPatternList = (pl) => pl.length >= 1;
 const isGlobList = (gl) => gl.length >= 1;
 /**
@@ -19391,7 +19391,7 @@ exports.Pattern = Pattern;
 
 /***/ }),
 
-/***/ 46:
+/***/ 8596:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19399,7 +19399,7 @@ exports.Pattern = Pattern;
 // synchronous utility for filtering entries and calculating subwalks
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Processor = exports.SubWalks = exports.MatchRecord = exports.HasWalkedCache = void 0;
-const minimatch_1 = __nccwpck_require__(1465);
+const minimatch_1 = __nccwpck_require__(9181);
 /**
  * A cache of which patterns have been processed for a given Path
  */
@@ -19707,7 +19707,7 @@ exports.Processor = Processor;
 
 /***/ }),
 
-/***/ 7549:
+/***/ 9522:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19720,9 +19720,9 @@ exports.GlobStream = exports.GlobWalker = exports.GlobUtil = void 0;
  *
  * @module
  */
-const minipass_1 = __nccwpck_require__(9169);
-const ignore_js_1 = __nccwpck_require__(7800);
-const processor_js_1 = __nccwpck_require__(46);
+const minipass_1 = __nccwpck_require__(1395);
+const ignore_js_1 = __nccwpck_require__(5645);
+const processor_js_1 = __nccwpck_require__(8596);
 const makeIgnore = (ignore, opts) => typeof ignore === 'string'
     ? new ignore_js_1.Ignore([ignore], opts)
     : Array.isArray(ignore)
@@ -20072,7 +20072,7 @@ exports.GlobStream = GlobStream;
 
 /***/ }),
 
-/***/ 26:
+/***/ 4951:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -21474,7 +21474,7 @@ exports.LRUCache = LRUCache;
 
 /***/ }),
 
-/***/ 7807:
+/***/ 1393:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -21495,7 +21495,7 @@ exports.assertValidPattern = assertValidPattern;
 
 /***/ }),
 
-/***/ 7221:
+/***/ 1919:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -21503,8 +21503,8 @@ exports.assertValidPattern = assertValidPattern;
 // parse a single path portion
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AST = void 0;
-const brace_expressions_js_1 = __nccwpck_require__(3919);
-const unescape_js_1 = __nccwpck_require__(7374);
+const brace_expressions_js_1 = __nccwpck_require__(5076);
+const unescape_js_1 = __nccwpck_require__(9764);
 const types = new Set(['!', '?', '+', '*', '@']);
 const isExtglobType = (c) => types.has(c);
 // Patterns that get prepended to bind to the start of either the
@@ -22091,7 +22091,7 @@ exports.AST = AST;
 
 /***/ }),
 
-/***/ 3919:
+/***/ 5076:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -22250,7 +22250,7 @@ exports.parseClass = parseClass;
 
 /***/ }),
 
-/***/ 7887:
+/***/ 7275:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -22279,7 +22279,7 @@ exports.escape = escape;
 
 /***/ }),
 
-/***/ 1465:
+/***/ 9181:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -22289,11 +22289,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.unescape = exports.escape = exports.AST = exports.Minimatch = exports.match = exports.makeRe = exports.braceExpand = exports.defaults = exports.filter = exports.GLOBSTAR = exports.sep = exports.minimatch = void 0;
-const brace_expansion_1 = __importDefault(__nccwpck_require__(635));
-const assert_valid_pattern_js_1 = __nccwpck_require__(7807);
-const ast_js_1 = __nccwpck_require__(7221);
-const escape_js_1 = __nccwpck_require__(7887);
-const unescape_js_1 = __nccwpck_require__(7374);
+const brace_expansion_1 = __importDefault(__nccwpck_require__(5761));
+const assert_valid_pattern_js_1 = __nccwpck_require__(1393);
+const ast_js_1 = __nccwpck_require__(1919);
+const escape_js_1 = __nccwpck_require__(7275);
+const unescape_js_1 = __nccwpck_require__(9764);
 const minimatch = (p, pattern, options = {}) => {
     (0, assert_valid_pattern_js_1.assertValidPattern)(pattern);
     // shortcut: comments match nothing.
@@ -23282,11 +23282,11 @@ class Minimatch {
 }
 exports.Minimatch = Minimatch;
 /* c8 ignore start */
-var ast_js_2 = __nccwpck_require__(7221);
+var ast_js_2 = __nccwpck_require__(1919);
 Object.defineProperty(exports, "AST", ({ enumerable: true, get: function () { return ast_js_2.AST; } }));
-var escape_js_2 = __nccwpck_require__(7887);
+var escape_js_2 = __nccwpck_require__(7275);
 Object.defineProperty(exports, "escape", ({ enumerable: true, get: function () { return escape_js_2.escape; } }));
-var unescape_js_2 = __nccwpck_require__(7374);
+var unescape_js_2 = __nccwpck_require__(9764);
 Object.defineProperty(exports, "unescape", ({ enumerable: true, get: function () { return unescape_js_2.unescape; } }));
 /* c8 ignore stop */
 exports.minimatch.AST = ast_js_1.AST;
@@ -23297,7 +23297,7 @@ exports.minimatch.unescape = unescape_js_1.unescape;
 
 /***/ }),
 
-/***/ 7374:
+/***/ 9764:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -23328,7 +23328,7 @@ exports.unescape = unescape;
 
 /***/ }),
 
-/***/ 3357:
+/***/ 2101:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -23358,7 +23358,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PathScurry = exports.Path = exports.PathScurryDarwin = exports.PathScurryPosix = exports.PathScurryWin32 = exports.PathScurryBase = exports.PathPosix = exports.PathWin32 = exports.PathBase = exports.ChildrenCache = exports.ResolveCache = void 0;
-const lru_cache_1 = __nccwpck_require__(26);
+const lru_cache_1 = __nccwpck_require__(4951);
 const path_1 = __nccwpck_require__(1017);
 const url_1 = __nccwpck_require__(7310);
 const actualFS = __importStar(__nccwpck_require__(7147));
@@ -23367,7 +23367,7 @@ const realpathSync = fs_1.realpathSync.native;
 // TODO: test perf of fs/promises realpath vs realpathCB,
 // since the promises one uses realpath.native
 const promises_1 = __nccwpck_require__(3292);
-const minipass_1 = __nccwpck_require__(9169);
+const minipass_1 = __nccwpck_require__(1395);
 const defaultFS = {
     lstatSync: fs_1.lstatSync,
     readdir: fs_1.readdir,
@@ -25406,9 +25406,9 @@ var __webpack_exports__ = {};
 const fs = __nccwpck_require__(7147)
 const crypto = __nccwpck_require__(6113)
 
-const { globSync } = __nccwpck_require__(5261)
-const { markdownToBlocks } = __nccwpck_require__(2062)
-const { Client } = __nccwpck_require__(4232)
+const { globSync } = __nccwpck_require__(7087)
+const { markdownToBlocks } = __nccwpck_require__(1092)
+const { Client } = __nccwpck_require__(2578)
 const { title } = __nccwpck_require__(7282)
 
 const REQUIRED_ENV_VARS = ['FOLDER', 'NOTION_TOKEN', 'NOTION_ROOT_PAGE_ID', 'RELATIVE_URLS_ROOT']
@@ -25445,46 +25445,57 @@ const getNotionRootPageId = () => {
 }
 
 const getFilesToProcess = () => {
-  let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' })
+  // let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' });
+  // Currently only interested in uploading README files
+  let files = globSync(`${process.env.FOLDER}/**/README.md`, { ignore: 'node_modules/**' });
 
   // pop readme to top
-  const readmePath = `${process.env.FOLDER}/README.md`
+  const readmePath = `${process.env.FOLDER}/README.md`;
   if (files.includes(readmePath)) {
-    files = files.filter((path) => path !== readmePath)
-    files = [readmePath, ...files]
+    files = files.filter((path) => path !== readmePath);
+    files.unshift(readmePath);
   }
 
-  return files
-}
+  // Create a map mapping title (first heading) to file path
+  const filesToHeadings = files.reduce((acc, filePath) => {
+    const title = titleFromFirstHeading(filePath);
+    acc.set(title, filePath);
+    return acc;
+  }, new Map());
 
-const deleteBlocksSequentially = function (idToDelete, allIdsToDelete) {
-  if (!idToDelete) return new Promise((resolve, _reject) => resolve())
+  return filesToHeadings;
+};
 
-  const deleteOne = (id, ids, resolve, reject) => {
-    notion.blocks.delete({
-      block_id: id
-    }).then(function () {
-      console.log('Block deleted:', id)
-
-      if (id !== ids[ids.length - 1]) {
-        const nextDeleteId = ids[ids.indexOf(id) + 1]
-        deleteOne(nextDeleteId, ids, resolve, reject)
-      } else {
-        console.log('Block deletion complete')
-
-        resolve()
-      }
-    }).catch((error) => {
-      reject(error)
-    })
+const deleteBlocksSequentially = function(idsToDelete) {
+  // Check if the array is empty and resolve immediately if it is
+  if (!idsToDelete || idsToDelete.length === 0) {
+    return Promise.resolve();
   }
 
-  const resultPromise = new Promise((resolve, reject) => {
-    deleteOne(idToDelete, allIdsToDelete, resolve, reject)
-  })
+  const deleteOne = (index) => {
+    return new Promise((resolve, reject) => {
+      const id = idsToDelete[index];
+      notion.blocks.delete({ block_id: id })
+        .then(() => {
+          console.log('Block deleted:', id);
 
-  return resultPromise
-}
+          // If there are more IDs to delete, call deleteOne recursively
+          if (index < idsToDelete.length - 1) {
+            resolve(deleteOne(index + 1));
+          } else {
+            console.log('Block deletion complete');
+            resolve();
+          }
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  };
+
+  // Start the deletion process with the first ID in the array
+  return deleteOne(0);
+};
 
 const deepReplaceValue = (target, lookupKey, newValueFn) => {
   if (Array.isArray(target)) {
@@ -25505,15 +25516,19 @@ const deepReplaceValue = (target, lookupKey, newValueFn) => {
   return target
 }
 
-const titleFromFilePath = (filePath) => {
-  let title = filePath.split(process.env.FOLDER).splice(-1)[0]
-  title = title.replace(/^\//, '')
+const titleFromFirstHeading = (filePath) => {
+  // Read the content of the file
+  const fileContent = fs.readFileSync(filePath, 'utf8');
 
-  return title.replace('.md', '')
-}
-
-const titleToFilePath = (filePath) => {
-  return `${process.env.FOLDER}/${filePath}.md`
+  // Use a regular expression to find the first Markdown heading
+  const match = fileContent.match(/^#\s*(.+)/m);
+  if (match && match[1]) {
+    // Return the first heading without the '# ' prefix
+    return match[1].trim();
+  } else {
+    // If no heading is found, return a default title or handle it as needed
+    return 'Default Title';
+  }
 }
 
 const fileToNotionBlocks = (filePath) => {
@@ -25546,138 +25561,145 @@ const fileToNotionBlocks = (filePath) => {
   return newBlocks
 }
 
-const createPagesSequentially = (fileToCreate, allFilesToCreate, rootPage) => {
-  if (!fileToCreate) return new Promise((resolve, _reject) => resolve())
+const createPagesSequentially = (pageTitleToFileMap, rootPage) => {
+  // Check if the array is empty and resolve immediately if it is
+  if (!pageTitleToFileMap || pageTitleToFileMap.length === 0) {
+    return Promise.resolve();
+  }
 
-  const createOne = (file, files, resolve, reject) => {
-    const newBlocks = fileToNotionBlocks(file)
-    const title = titleFromFilePath(file)
+  const entries = Array.from(pageTitleToFileMap.entries());
 
-    notion.pages.create({
-      parent: {
-        type: 'page_id',
-        page_id: rootPage.id
-      },
-      properties: {
-        title: {
-          title: [{ text: { content: title } }], type: 'title'
-        }
+  const createOne = (index) => {
+    return new Promise((resolve, reject) => {
+      if (index >= entries.length) {
+        return resolve();
       }
-    }).then((pageResponse) => {
-      console.log('Page created', title)
 
-      notion.blocks.children.append({ block_id: pageResponse.id, children: newBlocks }).then(() => {
-        // process next page
-        if (file !== files[files.length - 1]) {
-          createOne(files[files.indexOf(file) + 1], files, resolve, reject)
-        } else {
-          resolve()
-        }
-      }).catch((error) => {
-        if (IGNORE_CREATE_ERRORS) {
-          console.log('Blocks appending failed, but error ignored ', error)
+      const [title, filePath] = entries[index];
+      const newBlocks = fileToNotionBlocks(filePath); // Convert file to Notion blocks using the filePath
 
-          if (file !== files[files.length - 1]) {
-            createOne(files[files.indexOf(file) + 1], files, resolve, reject)
-          } else {
-            resolve()
+      notion.pages.create({
+        parent: {
+          type: 'page_id',
+          page_id: rootPage.id
+        },
+        properties: {
+          title: {
+            title: [{ text: { content: title } }], type: 'title'
           }
-        } else {
-          reject(error)
         }
-      })
-    }).catch((error) => {
-      reject(error)
-    })
-  }
+      }).then((pageResponse) => {
+        console.log('Page created', title);
 
-  const resultPromise = new Promise((resolve, reject) => {
-    createOne(fileToCreate, allFilesToCreate, resolve, reject)
-  })
-
-  return resultPromise
-}
-
-const updatePagesSequentially = (fileToUpdate, filesToUpdate, blocksWithChildPages) => {
-  if (!fileToUpdate) return new Promise((resolve, _reject) => resolve())
-
-  const updateOne = (file, files, resolve, reject) => {
-    const finalize = () => {
-      if (files.slice(-1)[0] === file) {
-        resolve()
-      } else {
-        updateOne(files[files.indexOf(file) + 1], files, resolve, reject)
-      }
-    }
-
-    const blockWithChildPage = blocksWithChildPages.filter((r) => {
-      return r.child_page?.title === titleFromFilePath(file)
-    })[0]
-    if (!blockWithChildPage) {
-      console.log('block not found on readme, skip ... (this is error)', file)
-      return finalize()
-    } // or error?
-
-    notion.blocks.children.list({ block_id: blockWithChildPage.id }).then((pageBlocksResponse) => {
-      const updatedNotionBlocks = fileToNotionBlocks(file)
-
-      // change detection
-      let isChanged = false
-      const fileContent = fs.readFileSync(file, 'utf8')
-      const fileMD5 = crypto.createHash('md5').update(fileContent).digest('hex')
-      const md5Block = pageBlocksResponse.results.slice(-1)[0]
-      const md5RichText = md5Block?.paragraph?.rich_text[0]
-
-      if (md5RichText?.text?.content?.match(DOCUMENT_HASH_TAG_REGEXP)) {
-        const md5 = md5RichText.text.content.split(DOCUMENT_HASH_TAG_REGEXP).slice(-1)[0]
-
-        if (md5 !== fileMD5) isChanged = true
-      } else {
-        isChanged = true
-      }
-
-      DEBUG && console.log('is changed ->', file, isChanged)
-
-      const idsToRemove = pageBlocksResponse.results.map((e) => e.id)
-
-      if (isChanged) {
-        deleteBlocksSequentially(idsToRemove[0], idsToRemove).then(() => {
-          // update page with new content
-          notion.blocks.children.append({
-            block_id: blockWithChildPage.id,
-            children: updatedNotionBlocks
-          }).then(() => {
-            finalize()
-          }).catch((error) => {
-            if (IGNORE_CREATE_ERRORS) {
-              console.log('Blocks appending failed, error ignored', error)
-              console.log('Try append error on page')
-
-              const errorBlocks = markdownToBlocks(`Blocks appending failed with error: ${error}`)
-
-              notion.blocks.children.append({
-                block_id: blockWithChildPage.id,
-                children: errorBlocks
-              }).then(() => {
-                finalize()
-              })
-              finalize()
+        notion.blocks.children.append({ block_id: pageResponse.id, children: newBlocks }).then(() => {
+          // Check if there are more entries to process
+          if (index < entries.length - 1) {
+            resolve(createOne(index + 1));
+          } else {
+            resolve();
+          }
+        }).catch((error) => {
+          if (IGNORE_CREATE_ERRORS) {
+            console.log('Blocks appending failed, but error ignored', error);
+            if (index < entries.length - 1) {
+              resolve(createOne(index + 1));
             } else {
-              reject(error)
+              resolve();
             }
-          })
-        })
-      } else {
-        finalize()
-      }
-    })
+          } else {
+            reject(error);
+          }
+        });
+      }).catch((error) => {
+        reject(error);
+      });
+    });
+  };
+
+  // Start the page creation process with the first entry in the Map
+  return createOne(0);
+};
+
+const updatePagesSequentially = (titlesToIdMap, titlesToPathsMap, blocksWithChildPages) => {
+  // Check if the array is empty and resolve immediately if it is
+  if (!titlesToIdMap || titlesToIdMap.length === 0) {
+    return Promise.resolve();
   }
+    
+  const titles = Array.from(titlesToIdMap.keys());
 
-  const resultPromise = new Promise((resolve, reject) => {
-    updateOne(fileToUpdate, filesToUpdate, resolve, reject)
-  })
+  const updateOne = (titleIndex) => {
+    return new Promise((resolve, reject) => {
+      if (titleIndex >= titles.length) {
+        return resolve();
+      }
+      const title = titles[titleIndex];
+      const filepath = titlesToPathsMap.get(title);
+      const pageId = titlesToIdMap.get(filepath);
 
-  return resultPromise
+      const blockWithChildPage = blocksWithChildPages.find((r) => r.child_page?.id === pageId);
+
+      if (!blockWithChildPage) {
+        console.log('block not found on readme, skip ... (this is error)', filepath);
+        return resolve(updateOne(titleIndex + 1)); // Move to the next file
+      }
+
+      notion.blocks.children.list({ block_id: blockWithChildPage.id }).then((pageBlocksResponse) => {
+        const updatedNotionBlocks = fileToNotionBlocks(filepath)
+
+        // change detection
+        let isChanged = false
+        const fileContent = fs.readFileSync(filepath, 'utf8')
+        const fileMD5 = crypto.createHash('md5').update(fileContent).digest('hex')
+        const md5Block = pageBlocksResponse.results.slice(-1)[0]
+        const md5RichText = md5Block?.paragraph?.rich_text[0]
+
+        if (md5RichText?.text?.content?.match(DOCUMENT_HASH_TAG_REGEXP)) {
+          const md5 = md5RichText.text.content.split(DOCUMENT_HASH_TAG_REGEXP).slice(-1)[0]
+
+          if (md5 !== fileMD5) isChanged = true
+        } else {
+          isChanged = true
+        }
+
+        DEBUG && console.log('is changed ->', filepath, isChanged)
+
+        const idsToRemove = pageBlocksResponse.results.map((e) => e.id)
+
+        if (isChanged) {
+          deleteBlocksSequentially(idsToRemove).then(() => {
+            // update page with new content
+            notion.blocks.children.append({
+              block_id: blockWithChildPage.id,
+              children: updatedNotionBlocks
+            }).then(() => {
+              return resolve()
+            }).catch((error) => {
+              if (IGNORE_CREATE_ERRORS) {
+                console.log('Blocks appending failed, error ignored', error)
+                console.log('Try append error on page')
+
+                const errorBlocks = markdownToBlocks(`Blocks appending failed with error: ${error}`)
+
+                notion.blocks.children.append({
+                  block_id: blockWithChildPage.id,
+                  children: errorBlocks
+                }).then(() => {
+                  return resolve()
+                })
+                return resolve()
+              } else {
+                reject(error)
+              }
+            })
+          })
+        } else {
+          return resolve()
+        }
+      });
+    });
+  };
+  return updateOne(0); // Start with the first file
 }
 
 const run = function () {
@@ -25688,27 +25710,60 @@ const run = function () {
     // const toCreate = filesToCreate.map((e) => titleFromFilePath(e))
 
     notion.blocks.children.list({ block_id: getNotionRootPageId() }).then((blocksResponse) => {
-      const current = blocksResponse.results.map((e) => titleToFilePath(e.child_page.title))
-      // console.log('created titles ->', current)
+      const blocksTitlesToIds = new Map();
+      blocksResponse.results.forEach(block => {
+        if (block.child_page && block.child_page.title && block.id) {
+          blocksTitlesToIds.set(block.child_page.title, block.id);
+        }
+      });
+      
+      const filesTitlesToPaths = getFilesToProcess(); // Assuming this returns a Map
+    
+      // title -> id
+      const updateMap = new Map();
+    
+      filesTitlesToPaths.forEach((path, title) => {
+        if (blocksTitlesToIds.has(title)) {
+          updateMap.set(title, blocksTitlesToIds.get(title));
+        }
+      });
 
-      const toCreate = getFilesToProcess()
-      const updateList = toCreate.filter((e) => current.includes(e))
-      const createList = toCreate.filter((e) => !current.includes(e))
-      const deleteList = current.filter((e) => !toCreate.includes(e))
+      const filePathMap = new Map();
+      filesTitlesToPaths.forEach((path, title) => {
+        filePathMap.set(title, path);
+      })
+    
+      // title -> path
+      const createMap = new Map();
+    
+      filesTitlesToPaths.forEach((path, title) => {
+        if (!blocksTitlesToIds.has(title)) {
+          createMap.set(title, path);
+        }
+      });
+    
+      const deleteList = [];
+    
+      blocksTitlesToIds.forEach((id, title) => {
+        if (!filesTitlesToPaths.has(title)) {
+          deleteList.push(id);
+        }
+      });
 
-      console.log('createList ->', createList)
-      console.log('updateList ->', updateList)
-      console.log('deleteList ->', deleteList)
+      console.log('updateList ->', updateMap);
+      console.log('createList ->', createMap);
+      console.log('deleteList ->', deleteList);
 
-      updatePagesSequentially(updateList[0], updateList, blocksResponse.results).then(() => {
+      updatePagesSequentially(updateMap, filePathMap, blocksResponse.results).then(() => {
         console.log('--- all pages updated')
 
-        createPagesSequentially(createList[0], createList, rootPage).then(() => {
+        createPagesSequentially(createMap, rootPage).then(() => {
           console.log('--- new pages created')
 
-          deleteBlocksSequentially(deleteList[0], deleteList).then(() => {
-            console.log('--- sync complete')
-          })
+          // Disable deletion for now - not needed for our use case
+          // deleteBlocksSequentially(deleteList).then(() => {
+          //   console.log('--- sync complete')
+          // })
         })
       })
     })
