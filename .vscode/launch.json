@@ -14,8 +14,8 @@
             "program": "${workspaceFolder}\\index.js",
             "env": {
                 "FOLDER": "${workspaceFolder}",
-                "NOTION_TOKEN": "***REMOVED***",
-                "NOTION_ROOT_PAGE_ID": "***REMOVED***",
+                "NOTION_TOKEN": "NOTION_SECRET_HERE_DO_NOT_COMMIT",
+                "NOTION_ROOT_PAGE_ID": "NOTION_PAGE_ID_HERE_DO_NOT_COMMIT",
                 "RELATIVE_URLS_ROOT": "null"
             }
         }
