@@ -42,10 +42,19 @@ const getNotionRootPageId = () => {
 const getFilesToProcess = () => {
   // let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' });
   // Currently only interested in uploading README files
-  let files = globSync(`${process.env.FOLDER}/**/README.md`, { ignore: 'node_modules/**', nocase: true });
+  // let files = globSync(`${process.env.FOLDER}/**/README.md`, { ignore: 'node_modules/**', nocase: true });
+  let files = globSync(`${process.env.FOLDER}/README.md`, { ignore: 'node_modules/**', nocase: true });
 
-    files.forEach(file => {
+  let allFiles = globSync(`${process.env.FOLDER}/**/*`, { ignore: 'node_modules/**', nodir: true });
+
+
+  files.forEach(file => {
       console.log(file);
+  });
+
+  console.log("all files:");
+  allFiles.forEach(file => {
+    console.log(file);
   });
 
   // pop readme to top
