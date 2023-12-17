@@ -45,15 +45,18 @@ const getFilesToProcess = () => {
   // let files = globSync(`${process.env.FOLDER}/**/README.md`, { ignore: 'node_modules/**', nocase: true });
   let files = globSync(`${process.env.FOLDER}/README.md`, { ignore: 'node_modules/**', nocase: true });
 
-  let allFiles = globSync(`${process.env.FOLDER}/**/*`, { ignore: 'node_modules/**', nodir: true });
-  console.log(process.env.FOLDER);
-  files.forEach(file => {
-      console.log(file);
-  });
+  // let allFiles = globSync(`${process.env.FOLDER}/**/*`, { ignore: 'node_modules/**', nodir: true });
+  // files.forEach(file => {
+  //     console.log(file);
+  // });
 
-  console.log("all files:");
-  allFiles.forEach(file => {
-    console.log(file);
+  console.log("all files fs:");
+  // allFiles.forEach(file => {
+  //   console.log(file);
+  // });
+
+  fs.readdirSync(`${process.env.FOLDER}`).forEach(file => {
+    console.log(file); 
   });
 
   // pop readme to top
