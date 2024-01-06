@@ -25445,24 +25445,7 @@ const getNotionRootPageId = () => {
 }
 
 const getFilesToProcess = () => {
-  // let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**' });
-  // Currently only interested in uploading README files
-  // let files = globSync(`${process.env.FOLDER}/**/README.md`, { ignore: 'node_modules/**', nocase: true });
   let files = globSync(`${process.env.FOLDER}/README.md`, { ignore: 'node_modules/**', nocase: true });
-
-  // let allFiles = globSync(`${process.env.FOLDER}/**/*`, { ignore: 'node_modules/**', nodir: true });
-  // files.forEach(file => {
-  //     console.log(file);
-  // });
-
-  console.log("all files fs:");
-  // allFiles.forEach(file => {
-  //   console.log(file);
-  // });
-
-  fs.readdirSync(`${process.env.FOLDER}`).forEach(file => {
-    console.log(file); 
-  });
 
   // pop readme to top
   const readmePath = `${process.env.FOLDER}/README.md`;
@@ -25477,6 +25460,8 @@ const getFilesToProcess = () => {
     acc.set(title, filePath);
     return acc;
   }, new Map());
+
+  console.log('filesToHeadings ->', filesToHeadings);
 
   return filesToHeadings;
 };
@@ -25658,6 +25643,8 @@ const updatePagesSequentially = (titlesToIdMap, titlesToPathsMap, blocksWithChil
         console.log('block not found on readme, skip ... (this is error)', filepath);
         return resolve(updateOne(titleIndex + 1)); // Move to the next file
       }
+      
+      console.log("found page", blockWithChildPage.title, blockWithChildPage.id);
 
       notion.blocks.children.list({ block_id: blockWithChildPage.id }).then((pageBlocksResponse) => {
         const updatedNotionBlocks = fileToNotionBlocks(filepath)
@@ -25766,6 +25753,7 @@ const run = function () {
       });
 
       console.log('updateList ->', updateMap);
+      console.log('updateListPaths ->', filePathMap);
       console.log('createList ->', createMap);
       // console.log('deleteList ->', deleteList);
 
