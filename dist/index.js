@@ -25461,7 +25461,7 @@ const getFilesToProcess = () => {
     return acc;
   }, new Map());
 
-  console.log('filesToHeadings ->', filesToHeadings);
+  DEBUG && console.log('filesToHeadings ->', filesToHeadings);
 
   return filesToHeadings;
 };
@@ -25635,16 +25635,16 @@ const updatePagesSequentially = (titlesToIdMap, titlesToPathsMap, blocksWithChil
       }
       const title = titles[titleIndex];
       const filepath = titlesToPathsMap.get(title);
-      const pageId = titlesToIdMap.get(filepath);
+      const pageId = titlesToIdMap.get(title);
 
-      const blockWithChildPage = blocksWithChildPages.find((r) => r.child_page?.id === pageId);
+      const blockWithChildPage = blocksWithChildPages.find((r) => r.id === pageId);
 
       if (!blockWithChildPage) {
         console.log('block not found on readme, skip ... (this is error)', filepath);
         return resolve(updateOne(titleIndex + 1)); // Move to the next file
       }
       
-      console.log("found page", blockWithChildPage.title, blockWithChildPage.id);
+      DEBUG && console.log("found page", blockWithChildPage.child_page.title, blockWithChildPage.id);
 
       notion.blocks.children.list({ block_id: blockWithChildPage.id }).then((pageBlocksResponse) => {
         const updatedNotionBlocks = fileToNotionBlocks(filepath)
@@ -25752,9 +25752,9 @@ const run = function () {
         }
       });
 
-      console.log('updateList ->', updateMap);
-      console.log('updateListPaths ->', filePathMap);
-      console.log('createList ->', createMap);
+      DEBUG && console.log('updateList ->', updateMap);
+      DEBUG && console.log('updateListPaths ->', filePathMap);
+      DEBUG && console.log('createList ->', createMap);
       // console.log('deleteList ->', deleteList);
 
       updatePagesSequentially(updateMap, filePathMap, blocksResponse.results).then(() => {
