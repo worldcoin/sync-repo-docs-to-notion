@@ -14,6 +14,34 @@ All configuration are done with environment variables for compatibility with oth
 
 ## Example usage
 
+### Unity Version Control
+
+To use it in Unity DevOps, you will need to create a new build configuration for the Plastic (aka Unity VCS) repository. In the Advanced settings, set the environment variables described in the yaml below. `RELATIVE_URLS_ROOT` can be left blank. DEBUG = 1 will show additional console logs. Create a new shell script e.g. `readmeToNotion.sh` and paste the following:
+
+```bash
+#!/usr/bin/env bash
+
+## Source profile
+. ~/.profile
+
+## Install NVM modules and set version
+nvm install 16.20.0
+nvm use 16.20.0
+
+export FOLDER="./"
+
+git clone https://github.com/ZeroSpace-Studios/sync-repo-docs-to-notion.git
+node sync-repo-docs-to-notion/dist/index.js
+```
+
+Set either your pre-build script or post-build script to the `readmeToNotion.sh`. In the basic settings, also set Auto-build so that the README gets automatically updated in Notion whenever you've updated the project. (Currently this feature is not working as expected as Unity DevOps have decided to automatically cancel auto-build if your project fails to build).
+
+See the `ZS_1123_VolumetricRnD` configuration as an example.
+
+### GitHub Actions
+
+See the `AnimationTools` repo as an example.
+
 ```yaml
 on:
   push:
@@ -26,7 +54,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: sync repo docs to notions
-        uses: pechorin/sync-repo-docs-to-notion@main
+        uses: ZeroSpace-Studios/sync-repo-docs-to-notion@main
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_ROOT_PAGE_ID: https://www.notion.so/MyRootPage-jdskdjs8yd83dheeee
@@ -63,7 +91,7 @@ jobs:
             *.md
       - name: sync repo docs to notions
         if: steps.changed-files-specific.outputs.any_changed == 'true'
-        uses: pechorin/sync-repo-docs-to-notion@main
+        uses: ZeroSpace-Studios/sync-repo-docs-to-notion@main
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_ROOT_PAGE_ID: https://www.notion.so/MyRootPage-jdskdjs8yd83dheeee
