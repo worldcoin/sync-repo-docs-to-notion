@@ -16,7 +16,7 @@ All configuration are done with environment variables for compatibility with oth
 
 ### Unity Version Control
 
-To use it in Unity DevOps, you will need to create a new build configuration for the Plastic (aka Unity VCS) repository. In the Advanced settings, set the environment variables described in the yaml below. `RELATIVE_URLS_ROOT` can be left blank. DEBUG = 1 will show additional console logs. Create a new shell script e.g. `readmeToNotion.sh` and paste the following:
+To use it in Unity DevOps, you will need to create a new build configuration for the Plastic (aka Unity VCS) repository. In the Advanced settings, set the environment variables described in the yaml below. `RELATIVE_URLS_ROOT` can be left blank. DEBUG = 1 will show additional console logs. Create a new shell script `readme_to_notion.sh` in your repository root directory and paste the following:
 
 ```bash
 #!/usr/bin/env bash
@@ -34,7 +34,7 @@ git clone https://github.com/ZeroSpace-Studios/sync-repo-docs-to-notion.git
 node sync-repo-docs-to-notion/dist/index.js
 ```
 
-Set either your pre-build script or post-build script to the `readmeToNotion.sh`. In the basic settings, also set Auto-build so that the README gets automatically updated in Notion whenever you've updated the project. (Currently this feature is not working as expected as Unity DevOps have decided to automatically cancel auto-build if your project fails to build).
+Set either your pre-build script or post-build script to the `readme_to_notion.sh`. In the basic settings, also set Auto-build so that the README gets automatically updated in Notion whenever you've updated the project. (Currently this feature is not working as expected as Unity DevOps have decided to automatically cancel auto-build if your project fails to build).
 
 See the `ZS_1123_VolumetricRnD` configuration as an example.
 
@@ -104,8 +104,7 @@ jobs:
 ### Warnings
 - Deletion is slow, if you changed a lot of documents it's easier to cleanup Notion first, and then run the action
 
-
-## Local installation
+## Local installation and developer setup
 
 - install [nvm for windows](https://github.com/coreybutler/nvm-windows)
 - nvm install 16.20.0
@@ -113,11 +112,37 @@ jobs:
 - clone this project
 - navigate to cloned project
 - npm install
-- set environment variables:
-```bash
-$env:FOLDER=$pwd # your project root directory (where the README is located)
-$env:NOTION_TOKEN='your_notion_token'
-$env:NOTION_ROOT_PAGE_ID='your_page_id'
-$env:RELATIVE_URLS_ROOT='null'
+### VS Code
+- Configure your launch.json with environment variables (Be sure not to commit them to the repo!):
+```json
+            "program": "${workspaceFolder}\\index.js",
+            "env": {
+                "FOLDER": "${workspaceFolder}",
+                "NOTION_TOKEN": "NOTION_SECRET_HERE_DO_NOT_COMMIT",
+                "NOTION_ROOT_PAGE_ID": "NOTION_PAGE_ID_HERE_DO_NOT_COMMIT",
+                "RELATIVE_URLS_ROOT": "null",
+                "DEBUG": 1
+            }
 ```
-- node index.js
+
+### Local shell
+- To set environment variables in Windows powershell:
+    ```powershell
+    $env:FOLDER=$pwd
+    $env:NOTION_TOKEN='NOTION_SECRET'
+    $env:NOTION_ROOT_PAGE_ID='NOTION_PAGE_ID'
+    $env:RELATIVE_URLS_ROOT='null'
+    ```
+
+- Or, in bash environment:
+  ```bash
+  $env:FOLDER=$pwd # your project root directory (where the README is located)
+  $env:NOTION_TOKEN='your_notion_token'
+  $env:NOTION_ROOT_PAGE_ID='your_page_id'
+  $env:RELATIVE_URLS_ROOT='null'
+  ```
+- Then run `node index.js`
+
+### Deployment
+- To compile into `dist/index.js` for deployment, run `ncc build index.js`. This packages up the node modules so that `npm install` does not have to be run on deployed instances. Be sure to commit the updated `dist/index.js` as well.
+
