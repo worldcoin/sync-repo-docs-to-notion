@@ -28,6 +28,7 @@ To use it in Unity DevOps, you will need to create a new build configuration for
 nvm install 16.20.0
 nvm use 16.20.0
 
+# Exporting relative paths in Unity VCS configuration dashboard doesn't work, so do it manually here
 export FOLDER="./"
 
 git clone https://github.com/ZeroSpace-Studios/sync-repo-docs-to-notion.git
