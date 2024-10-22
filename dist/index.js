@@ -25445,7 +25445,7 @@ const getNotionRootPageId = () => {
 }
 
 const getFilesToProcess = () => {
-  let files = globSync(`${process.env.FOLDER}/README.md`, { ignore: 'node_modules/**', nocase: true });
+  let files = globSync(`${process.env.FOLDER}/**/*.md`, { ignore: 'node_modules/**', nocase: true });
 
   // pop readme to top
   const readmePath = `${process.env.FOLDER}/README.md`;
